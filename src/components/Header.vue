@@ -1,15 +1,35 @@
 <template>
     <div class="header">
-        <div class="logo"></div>
-        <div class="navigation">
-            <nav>
-                <router-link to="/">Home</router-link> | <router-link to="/about">About</router-link>
-            </nav>
-        </div>
+        <div class="header__logo"/>
+        <nav class="header__navigation">
+            <router-link
+                v-for="route in routes"
+                :key="route.path"
+                :to="route.path"
+                class="header__navigation-link"
+            >{{ route.name }}</router-link>
+        </nav>
     </div>
 </template>
 
+<script>
+import router from '@/router';
+
+export default {
+    name: 'App',
+
+    computed: {
+        routes() {
+            return router.getRoutes();
+        }
+    }
+}
+</script>
+
 <style lang="scss" scoped>
+$navigator-font-color: #eee;
+$navigator-font-color-active: #42b983;
+
 .header {
     display: flex;
     justify-content: space-around;
@@ -22,21 +42,47 @@
         margin: 24px;
     }
 
-    .logo {
+    &__logo {
         background: url('@/assets/logo.png') no-repeat;
         background-size: 250px 60px;
         width: 250px;
         height: 60px;
     }
 
-    nav a {
+    &__navigation a {
         font-weight: bold;
-        // color: #2c3e50;
-        color: #eee;
+        text-decoration: none;
+        color: $navigator-font-color;
+
+        &::after {
+            content: "|";
+            padding: 0 24px;
+        }
+
+        &:last-child::after {
+            content: "";
+        }
+
+        &.router-link-exact-active {
+            color: $navigator-font-color-active;
+
+            &:after {
+                color: $navigator-font-color;
+            }
+        }
     }
 
-    nav a.router-link-exact-active {
-        color: #42b983;
+    &__navigation-link {
+        text-transform: capitalize;
+    }
+
+    nav > .nav-element::after {
+        content: "|";
+        padding-left: 24px;
+    }
+
+    nav > .nav-element:last-child::after {
+        content: "";
     }
 }
 </style>

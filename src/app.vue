@@ -1,26 +1,26 @@
 <template>
-  <Header/>
-  <router-view #default="{ Component }" class="main">
-    <transition name="fade" mode="out-in">
-      <component :is="Component" />
-    </transition>
-  </router-view>
-  <Footer/>
+  <v-app>
+    <hu-header/>
+    <v-main>
+      <router-view #default="{ Component }" class="main">
+        <transition name="fade" mode="out-in">
+          <component :is="Component"/>
+        </transition>
+      </router-view>
+    </v-main>
+    <hu-footer/>
+  </v-app>
 </template>
 
 <script>
 export default {
-  name: 'app'
-};
+  name: 'App'
+}
 </script>
 
-<style>
+<style lang="scss" scoped>
 * {
   margin: 0;
-}
-
-a {
-  text-decoration: none;
 }
 
 #app {
