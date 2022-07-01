@@ -1,0 +1,9 @@
+{
+    "header": {
+        "navigation": {
+            "home": "Start",
+            "about": "Über mich",
+            "contact": "Kontakt"
+        }
+    }
+}

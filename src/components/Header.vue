@@ -7,7 +7,7 @@
                 :key="route.path"
                 :to="route.path"
                 class="header__navigation-link"
-            >{{ route.name }}</router-link>
+            >{{ $t(`header.navigation.${route.name}`) }}</router-link>
         </nav>
     </div>
 </template>
@@ -70,10 +70,6 @@ $navigator-font-color-active: #42b983;
                 color: $navigator-font-color;
             }
         }
-    }
-
-    &__navigation-link {
-        text-transform: capitalize;
     }
 
     nav > .nav-element::after {

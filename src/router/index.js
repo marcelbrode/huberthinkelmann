@@ -1,8 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-const routeComponents = {};
-
 /**------------- Load views ------------**/
+const routeComponents = {};
 const views = require.context('@/views/', true, /Route\.vue$/i);
 views.keys().forEach((filePath) => {
     const name = filePath.match(/\/([\w/_-]+)Route/)[1];
@@ -15,16 +14,13 @@ views.keys().forEach((filePath) => {
     };
 });
 
-console.log('routeComponents', routeComponents);
-
-const routes = [
-    routeComponents.home,
-    routeComponents.about
+const routeOrder = [
+    'home', 'about', 'contact'
 ];
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routes:  routeOrder.map(route => routeComponents[route])
 });
 
 export default router;

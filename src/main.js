@@ -1,12 +1,21 @@
 import { createApp } from 'vue';
+import { createI18n } from 'vue-i18n';
 import App from '@/app.vue';
 import router from '@/router';
-import vuetify from './plugins/vuetify';
-import { loadFonts } from './plugins/webfontloader';
+import vuetify from '@/plugins/vuetify';
+import { loadFonts } from '@/plugins/webfontloader';
+import messages from '@/plugins/snippetloader';
 
 const app = createApp(App);
+const i18n = createI18n({
+    locale: 'de-DE',
+    fallbackLocale: 'de-DE',
+    messages
+});
+
 app.use(router)
-    .use(vuetify);
+    .use(vuetify)
+    .use(i18n);
 
 loadFonts();
 
@@ -23,3 +32,4 @@ components.keys().map((key) => {
 });
 
 app.mount('#app');
+
