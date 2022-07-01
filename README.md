@@ -1,4 +1,4 @@
-# huberthinkelmann
+# Hubert Hinkelmann Web presence
 
 ## Project setup
 ```
