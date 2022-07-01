@@ -1,22 +1,16 @@
 <template>
   <Header/>
-  <transition name="fade" mode="out-in">
-    <router-view class="main"/>
-  </transition>
+  <router-view #default="{ Component }" class="main">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
   <Footer/>
 </template>
 
 <script>
-// @ is an alias to /src
-import Header from '@/components/Header.vue';
-import Footer from '@/components/Footer.vue';
-
 export default {
-  name: 'app',
-  components: {
-    Header,
-    Footer,
-  },
+  name: 'app'
 };
 </script>
 
