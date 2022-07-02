@@ -28,15 +28,20 @@ export default {
 
 <style lang="scss" scoped>
 $navigator-font-color: #eee;
-$navigator-font-color-active: #42b983;
+$navigator-font-color-active: $highlight;
 
 .header {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    background-color: #314152;
+    background-color: $accent;
     color: #fff;
+
+    filter: drop-shadow(0 1px 10px rgba(0,0,0,.08))
+            drop-shadow(0 2px 10px rgba(0,0,0,.06))
+            drop-shadow(0 1px 10px rgba(0,0,0,.1));
+
 
     > div {
         margin: 24px;
@@ -50,9 +55,8 @@ $navigator-font-color-active: #42b983;
     }
 
     &__navigation a {
-        font-weight: bold;
-        text-decoration: none;
         color: $navigator-font-color;
+        font-weight: bold;
 
         &::after {
             content: "|";

@@ -9,6 +9,7 @@
       </router-view>
     </v-main>
     <hu-footer/>
+    <hu-cookie-consent/>
   </v-app>
 </template>
 
@@ -18,17 +19,21 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 * {
   margin: 0;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  color: $highlight;
 }
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: $accent;
 }
 
 .main {

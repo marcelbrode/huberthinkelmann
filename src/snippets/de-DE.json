@@ -1,9 +1,17 @@
 {
+    "general": {
+        "accept": "Zustimmen",
+        "decline": "Ablehnen"
+    },
     "header": {
         "navigation": {
             "home": "Start",
             "about": "Über mich",
             "contact": "Kontakt"
         }
+    },
+    "cookie-consent": {
+        "content": "Diese Website verwendet Cookies, um eine bestmögliche Erfahrung bieten zu können.",
+        "moreInformationLink": "Mehr Informationen"
     }
 }

@@ -6,5 +6,15 @@ module.exports = defineConfig({
     vuetify: {
 			// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
 		}
+  },
+
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: `
+          @import "@/assets/_variables.scss";
+        `
+      }
+    }
   }
-})
+});
