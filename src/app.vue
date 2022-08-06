@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <hu-contact-bar/>
     <hu-header/>
     <v-main>
       <router-view #default="{ Component }" class="main">
@@ -9,6 +10,7 @@
       </router-view>
     </v-main>
     <hu-footer/>
+    <hu-cookie-consent/>
   </v-app>
 </template>
 
@@ -18,22 +20,37 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import url('@/assets/_variables.scss');
+
 * {
   margin: 0;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  color: $highlight;
 }
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  color: $accent;
+}
+
+.v-main {
+  display: flex;
+  align-self: center;
+  width: $content-max-width;
 }
 
 .main {
   min-height: 70vh;
-  padding: 40px;
+  border: 1px solid black;
+  // padding: 40px;
+  // border-radius: 12px;
+  // margin: 20px 0;
 }
 
 .fade-enter-active,

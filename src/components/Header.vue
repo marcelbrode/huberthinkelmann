@@ -1,14 +1,26 @@
 <template>
     <div class="header">
-        <div class="header__logo"/>
-        <nav class="header__navigation">
-            <router-link
-                v-for="route in routes"
-                :key="route.path"
-                :to="route.path"
-                class="header__navigation-link"
-            >{{ $t(`header.navigation.${route.name}`) }}</router-link>
-        </nav>
+        <div class="header__container">
+            <div class="header__logo"/>
+            <nav class="header__navigation header__navigation-desktop d-none d-sm-flex">
+                <router-link
+                    v-for="route in routes"
+                    :key="route.path"
+                    :to="route.path"
+                    class="header__navigation-link"
+                >
+                    {{ $t(`header.navigation.${route.name}`) }}
+                </router-link>
+            </nav>
+            <nav class="header__navigation header__navigation-mobile d-flex d-sm-none">
+                <v-btn
+                    variant="text"
+                    size="large"
+                    icon="mdi-menu"
+                    @click="onSidebarMenuOpen"
+                />
+            </nav>
+        </div>
     </div>
 </template>
 
@@ -18,27 +30,48 @@ import router from '@/router';
 export default {
     name: 'App',
 
+    data() {
+        return {
+            showSidebar: false,      
+        };
+    },
+
     computed: {
         routes() {
             return router.getRoutes();
-        }
-    }
+        },
+    },
+
+    methods: {
+        onSidebarMenuOpen() {
+            this.showSidebar = true;
+        },
+
+        onSidebarMenuClose() {
+            this.showSidebar = false;
+        },
+    },
 }
 </script>
 
 <style lang="scss" scoped>
-$navigator-font-color: #eee;
-$navigator-font-color-active: #42b983;
+$navigator-font-color: $color-secondary;
+$navigator-font-color-active: $highlight;
 
 .header {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
 
-    background-color: #314152;
-    color: #fff;
+    background-color: $accent;
+    color: $color-secondary;
+    filter: $drop-shadow;
 
-    > div {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: $content-max-width;
         margin: 24px;
     }
 
@@ -50,35 +83,28 @@ $navigator-font-color-active: #42b983;
     }
 
     &__navigation a {
-        font-weight: bold;
-        text-decoration: none;
         color: $navigator-font-color;
+        transition: color 0.3s ease-in-out;
+        // font-weight: bold;
 
         &::after {
             content: "|";
+            color: $navigator-font-color;
             padding: 0 24px;
         }
 
         &:last-child::after {
             content: "";
+            padding: 0;
         }
 
         &.router-link-exact-active {
             color: $navigator-font-color-active;
 
-            &:after {
+            &::after {
                 color: $navigator-font-color;
             }
         }
-    }
-
-    nav > .nav-element::after {
-        content: "|";
-        padding-left: 24px;
-    }
-
-    nav > .nav-element:last-child::after {
-        content: "";
     }
 }
 </style>

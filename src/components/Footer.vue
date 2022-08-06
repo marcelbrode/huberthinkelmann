@@ -1,10 +1,17 @@
 <template>
-    <div class="footer">
-        <div>
+    <footer class="footer">
+        <div class="footer__container">
             <h1>Footer</h1>
         </div>
-    </div>
+    </footer>
 </template>
+
+<script>
+
+export default {
+    name: 'Footer',
+}
+</script>
 
 <style lang="scss" scoped>
 .footer {
@@ -12,11 +19,12 @@
     justify-content: space-around;
     align-items: center;
 
-    background-color: #314152;
-    color: #fff;
+    background-color: $accent;
+    color: $color-secondary;
 
-    > div {
+    &__container {
         margin: 24px;
     }
 }
+
 </style>
