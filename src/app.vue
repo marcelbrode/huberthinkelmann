@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <hu-contact-bar/>
     <hu-header/>
     <v-main>
       <router-view #default="{ Component }" class="main">
@@ -20,6 +21,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('@/assets/_variables.scss');
+
 * {
   margin: 0;
 }
@@ -36,9 +39,18 @@ a, a:visited, a:active {
   color: $accent;
 }
 
+.v-main {
+  display: flex;
+  align-self: center;
+  width: $content-max-width;
+}
+
 .main {
   min-height: 70vh;
-  padding: 40px;
+  border: 1px solid black;
+  // padding: 40px;
+  // border-radius: 12px;
+  // margin: 20px 0;
 }
 
 .fade-enter-active,

@@ -1,31 +1,62 @@
 <template>
-    <div class="cookie-consent">
-        <div class="cookie-consent__content">
-            <div class="cookie-consent__legal d-flex flex-column justify-center flex-grow-3 flex-shrink-3">
-                <p class="cookie-consent__legal-text font-weight-bold">{{ $t('cookie-consent.content') }}</p>
-                <router-link class="cookie-consent__legal-link" to="/">{{ $t('cookie-consent.moreInformationLink') }}</router-link>
-            </div>
-            <div class="cookie-consent__actions d-flex justify-center flex-column flex-md-row">
-                <v-btn class="cookie-consent_actions-decline ma-2" color="secondary">{{ $t('general.decline') }}</v-btn>
-                <v-btn class="cookie-consent_actions-accept ma-2" >{{ $t('general.accept') }}</v-btn>
+    <Transition>
+        <div
+            v-if="showConsentModal"
+            class="cookie-consent">
+            <div class="cookie-consent__content">
+                <div class="cookie-consent__legal d-flex flex-column justify-center flex-grow-3 flex-shrink-3">
+                    <p class="cookie-consent__legal-text font-weight-bold">{{ $t('cookie-consent.content') }}</p>
+                    <router-link class="cookie-consent__legal-link" to="/">{{ $t('cookie-consent.moreInformationLink') }}</router-link>
+                </div>
+                <div class="cookie-consent__actions d-flex justify-center flex-column flex-md-row">
+                    <v-btn
+                        class="cookie-consent_actions-decline ma-2"
+                        color="secondary"
+                        @click="onDecline"
+                    >{{ $t('general.decline') }}</v-btn>
+                    <v-btn
+                        class="cookie-consent_actions-accept ma-2"
+                        @click="onConfirm"
+                    >{{ $t('general.accept') }}</v-btn>
+                </div>
             </div>
         </div>
-    </div>
+    </Transition>
 </template>
 
 <script>
 export default {
     name: "CookieConsent",
-    components: {
-    }
+
+    data() {
+        return {
+            showConsentModal: false,
+            redirectUrl: 'https://google.com/',
+        };
+    },
+
+    mounted() {
+        this.mountedComponent();
+    },
+
+    methods: {
+        mountedComponent() {
+            this.showConsentModal = !localStorage.grantedCookieConsent;
+        },
+
+        onConfirm() {
+            localStorage.grantedCookieConsent = true;
+            this.showConsentModal = false;
+        },
+
+        onDecline() {
+            window.location.href = this.redirectUrl;
+        },
+    },
 }
 </script>
 
 <style lang="scss" scoped>
-$outer-margin: 24px;
-$border: 0;
-$border-radius: 10px;
-
 .cookie-consent {
     display: flex;
     position: absolute;
@@ -38,17 +69,24 @@ $border-radius: 10px;
     &__content {
         display: flex;
         width: 100%;
-        margin: $outer-margin;
+        margin: 24px;
         padding: 36px 24px;
 
-        justify-content: space-between;
-        
-        border: $border;
-        border-radius: $border-radius;
-        filter: drop-shadow(0 1px 10px rgba(0,0,0,.08))
-                drop-shadow(0 2px 10px rgba(0,0,0,.06))
-                drop-shadow(0 1px 10px rgba(0,0,0,.1));
         background-color: $background-color;
+        justify-content: space-between;
+
+        border-radius: 12px;
+        filter: $drop-shadow;
     }
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
 }
 </style>

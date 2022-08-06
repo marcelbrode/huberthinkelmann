@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <div>
+        <div class="footer__container">
             <h1>Footer</h1>
         </div>
     </footer>
@@ -20,9 +20,9 @@ export default {
     align-items: center;
 
     background-color: $accent;
-    color: #fff;
+    color: $color-secondary;
 
-    > div {
+    &__container {
         margin: 24px;
     }
 }

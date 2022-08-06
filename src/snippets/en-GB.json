@@ -10,6 +10,11 @@
             "contact": "Contact"
         }
     },
+    "contact-bar": {
+        "phone": "+49 251 / 270 5540",
+        "mail": "huberthinkelmann{'@'}web.de",
+        "businessHours": "Mon - Fri: 8 AM - 12 PM {'|'} 1 PM - 6 PM"
+    },
     "cookie-consent": {
         "content": "Diese Website verwendet Cookies, um eine bestmögliche Erfahrung bieten zu können.",
         "moreInformationLink": "Mehr Informationen"
