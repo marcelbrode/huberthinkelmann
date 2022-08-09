@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <hu-contact-bar/>
-    <hu-header/>
+    <hu-header @update-title="onUpdateTitle"/>
     <v-main>
       <router-view #default="{ Component }" class="main">
         <transition name="fade" mode="out-in">
@@ -10,13 +10,36 @@
       </router-view>
     </v-main>
     <hu-footer/>
+    <hu-copyright-bar/>
     <hu-cookie-consent/>
   </v-app>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
+  computed: {
+    translatedRoute() {
+      return this.$t(`header.navigation.${this.$route.name}`);
+    }
+  },
+
+  watch:{
+    $route (){
+      this.onUpdateTitle();
+    }
+  },
+
+  mounted() {
+    this.onUpdateTitle();
+  },
+
+  methods: {
+    onUpdateTitle() {     
+      document.title = `${this.translatedRoute} | ${this.$tc('general.title')}`;
+    }
+  }
 }
 </script>
 
@@ -29,14 +52,14 @@ export default {
 
 a, a:visited, a:active {
   text-decoration: none;
-  color: $highlight;
+  color: $color-highlight;
 }
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $accent;
+  color: $color-accent;
 }
 
 .v-main {
@@ -46,11 +69,12 @@ a, a:visited, a:active {
 }
 
 .main {
-  min-height: 70vh;
-  border: 1px solid black;
-  // padding: 40px;
-  // border-radius: 12px;
-  // margin: 20px 0;
+  min-height: 75vh;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 12px 0;
+  padding: 24px;
+  filter: $drop-shadow;
 }
 
 .fade-enter-active,

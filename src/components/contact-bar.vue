@@ -4,13 +4,13 @@
             <div class="contact-bar__phone contact-bar__element">
                 <v-icon class="contact-bar__icon">mdi-phone</v-icon>
                 <div class="contact-bar__phone-content">
-                    {{ $t('contact-bar.phone') }}
+                    {{ $t('general.personalInformation.phone') }}
                 </div>
             </div>
             <div class="contact-bar__mail contact-bar__element">
                 <v-icon class="contact-bar__icon">mdi-email</v-icon>
                 <div class="contact-bar__mail-content">
-                    {{ $t('contact-bar.mail') }}
+                    {{ $t('general.personalInformation.mail') }}
                 </div>
             </div>
             <div class="contact-bar__business-hours contact-bar__element d-none d-md-flex">
@@ -32,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 .contact-bar {
     display: flex;
-    background-color: darken($highlight, 10%);
+    background-color: darken($color-highlight, 10%);
     height: 32px;
     
     justify-content: center;
@@ -40,6 +40,7 @@ export default {
 
     &__container {
         display: flex;
+        margin: 0 6px;
         padding-top: 6px;
         font-size: 14px;
         width: $content-max-width;

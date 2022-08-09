@@ -1,25 +1,40 @@
 <template>
     <div class="header">
         <div class="header__container">
-            <div class="header__logo"/>
-            <nav class="header__navigation header__navigation-desktop d-none d-sm-flex">
-                <router-link
-                    v-for="route in routes"
-                    :key="route.path"
-                    :to="route.path"
-                    class="header__navigation-link"
-                >
-                    {{ $t(`header.navigation.${route.name}`) }}
-                </router-link>
-            </nav>
-            <nav class="header__navigation header__navigation-mobile d-flex d-sm-none">
-                <v-btn
-                    variant="text"
-                    size="large"
-                    icon="mdi-menu"
-                    @click="onSidebarMenuOpen"
-                />
-            </nav>
+            <div class="header__logo" :class="localeClasses"/>
+            <div class="header__menu header__menu-desktop d-none d-sm-flex">
+                <div class="header__language-select">
+                    <country-flag
+                        class="header__flag"
+                        iso="DE"
+                        @click="updateLanguageLocale('de-DE')" />
+                    <div class="header__separator">|</div>
+                    <country-flag
+                        class="header__flag"
+                        iso="GB"
+                        @click="updateLanguageLocale('en-GB')" />
+                </div>
+                <nav class="header__navigation header__navigation-desktop">
+                    <router-link
+                        v-for="route in routes"
+                        :key="route.path"
+                        :to="route.path"
+                        class="header__navigation-link"
+                    >
+                        {{ $t(`header.navigation.${route.name}`) }}
+                    </router-link>
+                </nav>
+            </div>
+            <div class="header__menu header__menu-mobile d-flex d-sm-none">
+                <nav class="header__navigation header__navigation-mobile">
+                    <v-btn
+                        variant="text"
+                        size="large"
+                        icon="mdi-menu"
+                        @click="onSidebarMenuOpen"
+                    />
+                </nav>
+            </div>
         </div>
     </div>
 </template>
@@ -40,6 +55,10 @@ export default {
         routes() {
             return router.getRoutes();
         },
+
+        localeClasses() {
+            return [`is--${this.$i18n.locale}`];
+        }
     },
 
     methods: {
@@ -50,19 +69,26 @@ export default {
         onSidebarMenuClose() {
             this.showSidebar = false;
         },
+
+        updateLanguageLocale(locale = 'de-DE') {
+            this.$i18n.locale = locale;
+            
+            this.$emit('update-title');
+        }
     },
 }
 </script>
 
 <style lang="scss" scoped>
 $navigator-font-color: $color-secondary;
-$navigator-font-color-active: $highlight;
+$navigator-font-color-active: $color-highlight;
+$logo-sizes: 250px 60px;
 
 .header {
     display: flex;
     justify-content: center;
 
-    background-color: $accent;
+    background-color: $color-accent;
     color: $color-secondary;
     filter: $drop-shadow;
 
@@ -76,21 +102,51 @@ $navigator-font-color-active: $highlight;
     }
 
     &__logo {
-        background: url('@/assets/logo.png') no-repeat;
-        background-size: 250px 60px;
+        background: url('@/assets/logo_de-DE.png') no-repeat;
+        background-repeat: no-repeat;
+        background-size: $logo-sizes;
         width: 250px;
         height: 60px;
+
+        &.is--en-GB {
+            background-image: url('@/assets/logo_en-GB.png');
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__language-select {
+        display: flex;
+        justify-content: right;
+        gap: 12px;
+    }
+    
+    &__flag {
+        border-radius: 25;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__separator {
+        color: $navigator-font-color;
     }
 
     &__navigation a {
         color: $navigator-font-color;
         transition: color 0.3s ease-in-out;
-        // font-weight: bold;
+        padding-left: 12px;
+        user-select: none;
 
         &::after {
             content: "|";
             color: $navigator-font-color;
-            padding: 0 24px;
+            padding-left: 12px;
         }
 
         &:last-child::after {

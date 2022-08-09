@@ -1,7 +1,17 @@
 {
     "general": {
+        "title": "Rechtsanwaltskanzlei Hubert Hinkelmann",
         "accept": "Zustimmen",
-        "decline": "Ablehnen"
+        "decline": "Ablehnen",
+        "personalInformation": {
+            "title": "Rechtsanwaltskanzlei Hubert Hinkelmann",
+            "address": "Grevener Straße 17\n48149 Münster",
+            "phone": "0251 / 270 5540",
+            "fax": "0251 / 270 5546",
+            "mail": "huberthinkelmann{'@'}web.de",
+            "businessHours": "Mo - Fr:\n08:00 - 12:00\n13:00 - 18:00",
+            "googleMapsLink": "{'https://www.google.com/maps/place/Hinkelmann+Hubert,+Rechtsanwalt,+Fachanwalt+f%C3%BCr+Miet-+%2B+WEG-Recht/@51.968196,7.6114831,16.25z/data=!4m5!3m4!1s0x0:0x9491bdcb0675917!8m2!3d51.9682577!4d7.6123287'}"
+        }
     },
     "header": {
         "navigation": {
@@ -10,10 +20,14 @@
             "contact": "Kontakt"
         }
     },
+    "footer": {
+        "businessHoursLabel": "Geschäftszeiten"
+    },
     "contact-bar": {
-        "phone": "0251 / 270 5540",
-        "mail": "huberthinkelmann{'@'}web.de",
         "businessHours": "Mo - Fr: 08:00 - 12:00 {'|'} 13:00 - 18:00"
+    },
+    "copyright-bar": {
+        "label": "2022 Marcel Brode"
     },
     "cookie-consent": {
         "content": "Diese Website verwendet Cookies, um eine bestmögliche Erfahrung bieten zu können.",
