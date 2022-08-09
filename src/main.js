@@ -3,6 +3,8 @@ import { createI18n } from 'vue-i18n';
 import App from '@/app.vue';
 import router from '@/router';
 import vuetify from '@/plugins/vuetify';
+import countryFlag from 'vue3-country-flag-icon';
+import 'vue3-country-flag-icon/dist/CountryFlag.css';
 import { loadFonts } from '@/plugins/webfontloader';
 import messages from '@/plugins/snippetloader';
 
@@ -16,6 +18,7 @@ const i18n = createI18n({
 app.use(router)
     .use(vuetify)
     .use(i18n);
+app.component('country-flag', countryFlag);
 
 loadFonts();
 

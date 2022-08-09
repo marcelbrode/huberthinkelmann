@@ -1,18 +1,14 @@
 $color-primary: rgba(0, 0, 0, 0.8);
 $color-secondary: #eee;
 
-$background-color: #f7f7f7;
-$accent: #314152;
-$highlight: #42b983;
-
+$color-background: #f7f7f7;
+$color-accent: #314152;
+$color-highlight: #42b983;
+$color-footer: #333;
 $content-max-width: 1000px;
 
 $spacer-default: 12px;
-$spacer-xs: calc($spacer-default * 0.25);
-$spacer-sm: calc($spacer-default * 0.5);
 $spacer-md: $spacer-default;
-$spacer-lg: calc($spacer-default * 1.5);
-$spacer-xl: calc($spacer-default * 2);
 
 $drop-shadow:   drop-shadow(0 1px 10px rgba(0,0,0,.08))
                 drop-shadow(0 2px 10px rgba(0,0,0,.06))

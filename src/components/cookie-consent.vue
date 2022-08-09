@@ -72,7 +72,7 @@ export default {
         margin: 24px;
         padding: 36px 24px;
 
-        background-color: $background-color;
+        background-color: $color-background;
         justify-content: space-between;
 
         border-radius: 12px;
