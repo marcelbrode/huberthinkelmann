@@ -59,7 +59,7 @@ export default {
 <style lang="scss" scoped>
 .cookie-consent {
     display: flex;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
