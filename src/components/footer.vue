@@ -3,16 +3,16 @@
         <div class="footer__container">
             <div class="footer__content">
                 <div class="footer__contact">
-                    <div class="footer_contact-title footer__contact-item">
+                    <div class="footer__contact-title footer__contact-item">
                         <h3>{{ $t('general.personalInformation.title') }}</h3>
                     </div>
-                    <div class="footer_contact-address footer__contact-item">
+                    <div class="footer__contact-address footer__contact-item">
                         <v-icon class="contact-bar__icon">mdi-map-marker</v-icon>
                         <span class="contact-bar__label">
                             {{ $t('general.personalInformation.address') }}
                         </span>
                     </div>
-                    <div class="footer_contact-phone footer__contact-item">
+                    <div class="footer__contact-phone footer__contact-item">
                         <v-icon class="contact-bar__icon">mdi-phone</v-icon>
                         <span class="contact-bar__label">
                             <a :href="`tel:${$t('general.personalInformation.phone')}`">
@@ -20,7 +20,7 @@
                             </a>
                         </span>
                     </div>
-                    <div class="footer_contact-fax footer__contact-item">
+                    <div class="footer__contact-fax footer__contact-item">
                         <v-icon class="contact-bar__icon">mdi-fax</v-icon>
                         <span class="contact-bar__label">
                             <a :href="`tel:${$t('general.personalInformation.phone')}`">
@@ -28,7 +28,7 @@
                             </a>
                         </span>
                     </div>
-                    <div class="footer_contact-mail footer__contact-item">
+                    <div class="footer__contact-mail footer__contact-item">
                         <v-icon class="contact-bar__icon">mdi-email</v-icon>
                         <span class="contact-bar__label">
                             <a :href="`mailto:${$t('general.personalInformation.phone')}`">
@@ -38,10 +38,10 @@
                     </div>
                 </div>
                 <div class="footer__business-hours">
-                    <div class="footer_business-hours-title footer__business-hours-item">
+                    <div class="footer__business-hours-title footer__business-hours-item">
                         <h3>{{ $t('footer.businessHoursLabel') }}</h3>
                     </div>                    
-                    <div class="footer_business-hours-title footer__business-hours-item">
+                    <div class="footer__business-hours-title footer__business-hours-item">
                         <v-icon class="contact-bar__icon">mdi-calendar-range</v-icon>
                         <span>{{ $t('general.personalInformation.businessHours') }}</span>
                     </div>
