@@ -1,5 +1,5 @@
 <template>
-  <div class="services-route">Home</div>
+  <div class="services-route">Services</div>
 </template>
 
 <script>

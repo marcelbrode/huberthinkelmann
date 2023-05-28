@@ -3,8 +3,10 @@
         <div v-if="show" class="sidebar">
             <div class="sidebar__header">
                 <v-btn
+                    class="sidebar__header-button"
                     variant="text"
-                    size="large"
+                    size="x-large"
+                    density="comfortable"
                     icon="mdi-chevron-left"
                     @click="onClose"
                 />
@@ -12,13 +14,6 @@
             </div>
             <div class="sidebar__content">
                 <h1>Hi there</h1>
-                <v-btn
-                    class="sidebar_actions-decline ma-2"
-                    color="secondary"
-                    @click="onClose"
-                >
-                    XXX
-                </v-btn>
             </div>
         </div>
     </Transition>
@@ -52,12 +47,13 @@ export default {
 <style lang="scss" scoped>
 .sidebar {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     background-color: white;
+    overflow: hidden;
 
     flex-direction: column;
 
@@ -67,7 +63,16 @@ export default {
         align-items: center;
 
         width: 100%;
-        margin: 24px;
+        padding: 24px;
+        
+        color: $color-secondary;
+        background-color: $color-tertiary;
+
+        &-button {
+            margin-right: 12px;
+
+
+        }
         
         &-text {
             font-size: 24px;
@@ -82,7 +87,7 @@ export default {
 
 .v-enter-active,
 .v-leave-active {
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .v-enter-from,
