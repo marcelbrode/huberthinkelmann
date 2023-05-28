@@ -15,7 +15,7 @@ views.keys().forEach((filePath) => {
 });
 
 const routeOrder = [
-    'home', 'about', 'contact'
+    'home', 'about', 'services', 'contact'
 ];
 
 const router = createRouter({

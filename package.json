@@ -35,6 +35,10 @@
     "vue-cli-plugin-vuetify": "~2.5.1",
     "webpack-plugin-vuetify": "^2.0.0-alpha.0"
   },
+  "engines" : { 
+    "npm" : "~9.5.1",
+    "node" : "~18.16.0"
+  },
   "eslintConfig": {
     "root": true,
     "env": {

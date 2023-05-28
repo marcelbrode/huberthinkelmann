@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: "CopyrightBar"
+    name: 'CopyrightBar',
 }
 </script>
 

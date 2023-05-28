@@ -17,11 +17,15 @@
         "navigation": {
             "home": "Start",
             "about": "Über mich",
+            "services": "Tätigkeitsfelder",
             "contact": "Kontakt"
         }
     },
     "footer": {
         "businessHoursLabel": "Geschäftszeiten"
+    },
+    "sidebar": {
+        "title": "Zurück"
     },
     "contact-bar": {
         "businessHours": "Mo - Fr: 08:00 - 12:00 {'|'} 13:00 - 18:00"
