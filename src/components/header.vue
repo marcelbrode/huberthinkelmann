@@ -1,18 +1,20 @@
 <template>
     <div class="header">
         <div class="header__container">
-            <div class="header__logo" :class="localeClasses"/>
+            <div class="header__logo" :class="localeClasses" />
             <div class="header__menu header__menu-desktop d-none d-sm-flex">
                 <div class="header__language-select">
                     <country-flag
                         class="header__flag"
                         iso="DE"
-                        @click="updateLanguageLocale('de-DE')" />
+                        @click="updateLanguageLocale('de-DE')"
+                    />
                     <div class="header__separator">|</div>
                     <country-flag
                         class="header__flag"
                         iso="GB"
-                        @click="updateLanguageLocale('en-GB')" />
+                        @click="updateLanguageLocale('en-GB')"
+                    />
                 </div>
                 <nav class="header__navigation header__navigation-desktop">
                     <router-link
@@ -31,7 +33,7 @@
                         variant="text"
                         size="large"
                         icon="mdi-menu"
-                        @click="onSidebarMenuOpen"
+                        @click="onOpenSidebar"
                     />
                 </nav>
             </div>
@@ -43,13 +45,7 @@
 import router from '@/router';
 
 export default {
-    name: 'App',
-
-    data() {
-        return {
-            showSidebar: false,      
-        };
-    },
+    name: 'Header',
 
     computed: {
         routes() {
@@ -58,25 +54,21 @@ export default {
 
         localeClasses() {
             return [`is--${this.$i18n.locale}`];
-        }
+        },
     },
 
     methods: {
-        onSidebarMenuOpen() {
-            this.showSidebar = true;
-        },
-
-        onSidebarMenuClose() {
-            this.showSidebar = false;
+        onOpenSidebar() {
+            this.$emit('openSidebar');
         },
 
         updateLanguageLocale(locale = 'de-DE') {
             this.$i18n.locale = locale;
-            
+
             this.$emit('update-title');
-        }
+        },
     },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -124,10 +116,10 @@ $logo-sizes: 250px 60px;
         justify-content: right;
         gap: 12px;
     }
-    
+
     &__flag {
         border-radius: 25;
-        
+
         &:hover {
             cursor: pointer;
         }
@@ -137,28 +129,34 @@ $logo-sizes: 250px 60px;
         color: $navigator-font-color;
     }
 
-    &__navigation a {
-        color: $navigator-font-color;
-        transition: color 0.3s ease-in-out;
-        padding-left: 12px;
-        user-select: none;
+    &__navigation {
+        &-link {
+            white-space: nowrap;
+        }
 
-        &::after {
-            content: "|";
+        a {
             color: $navigator-font-color;
+            transition: color 0.3s ease-in-out;
             padding-left: 12px;
-        }
-
-        &:last-child::after {
-            content: "";
-            padding: 0;
-        }
-
-        &.router-link-exact-active {
-            color: $navigator-font-color-active;
+            user-select: none;
 
             &::after {
+                content: "|";
                 color: $navigator-font-color;
+                padding-left: 12px;
+            }
+
+            &:last-child::after {
+                content: "";
+                padding: 0;
+            }
+
+            &.router-link-exact-active {
+                color: $navigator-font-color-active;
+
+                &::after {
+                    color: $navigator-font-color;
+                }
             }
         }
     }

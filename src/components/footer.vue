@@ -70,7 +70,7 @@ export default {
     justify-content: space-around;
     align-items: center;
 
-    background-color: $color-footer;
+    background-color: $color-tertiary;
     color: $color-secondary;
 
     &__container {

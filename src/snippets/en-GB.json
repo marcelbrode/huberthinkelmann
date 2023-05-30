@@ -17,11 +17,15 @@
         "navigation": {
             "home": "Home",
             "about": "About me",
+            "services": "Services",
             "contact": "Contact"
         }
     },
     "footer": {
         "businessHoursLabel": "Business hours"
+    },
+    "sidebar": {
+        "title": "Back"
     },
     "contact-bar": {
         "businessHours": "Mon - Fri: 8 AM - 12 PM {'|'} 1 PM - 6 PM"
