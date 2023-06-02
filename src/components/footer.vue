@@ -23,7 +23,7 @@
                     <div class="footer__contact-fax footer__contact-item">
                         <v-icon class="contact-bar__icon">mdi-fax</v-icon>
                         <span class="contact-bar__label">
-                            <a :href="`tel:${$t('general.personalInformation.phone')}`">
+                            <a :href="`fax:${$t('general.personalInformation.fax')}`">
                                 {{ $t('general.personalInformation.fax') }}
                             </a>
                         </span>
