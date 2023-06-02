@@ -72,8 +72,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$navigator-font-color: $color-secondary;
-$navigator-font-color-active: $color-highlight;
 $logo-sizes: 250px 60px;
 
 .header {

@@ -5,6 +5,9 @@ $color-tertiary: #333;
 $color-background: #f7f7f7;
 $color-accent: #314152;
 $color-highlight: #42b983;
+
+$color-white: #fff;
+
 $content-max-width: 1000px;
 
 $spacer-default: 12px;
@@ -13,3 +16,6 @@ $spacer-md: $spacer-default;
 $drop-shadow:   drop-shadow(0 1px 10px rgba(0,0,0,.08))
                 drop-shadow(0 2px 10px rgba(0,0,0,.06))
                 drop-shadow(0 1px 10px rgba(0,0,0,.1));
+
+$navigator-font-color: $color-secondary;
+$navigator-font-color-active: $color-highlight;
