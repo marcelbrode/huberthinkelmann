@@ -2,24 +2,50 @@
     <Transition>
         <div v-if="show" class="sidebar">
             <div class="sidebar__header">
-                <v-btn
-                    class="sidebar__header-button"
-                    variant="text"
-                    size="x-large"
-                    density="comfortable"
-                    icon="mdi-chevron-left"
-                    @click="onClose"
-                />
-               <div class="sidebar__header-text">{{ $tc('sidebar.title') }}</div>
+                <div class="sidebar__header-title">
+                    <v-btn
+                        class="sidebar__header-title-button"
+                        variant="text"
+                        size="x-large"
+                        density="comfortable"
+                        icon="mdi-chevron-left"
+                        @click="onClose"
+                    />
+                    <div class="sidebar__header-title-text">{{ $tc('sidebar.title') }}</div>
+                </div>
+                <div class="sidebar__header-language">
+                    <country-flag
+                        class="sidebar__header-language-flag"
+                        iso="DE"
+                        @click="updateLanguageLocale('de-DE')"
+                    />
+                    <country-flag
+                        class="sidebar__header-language-flag"
+                        iso="GB"
+                        @click="updateLanguageLocale('en-GB')"
+                    />
+                </div>
             </div>
             <div class="sidebar__content">
-                <h1>Hi there</h1>
+                <nav class="sidebar__navigation sidebar__navigation-mobile">
+                    <router-link
+                        v-for="route in routes"
+                        :key="route.path"
+                        :to="route.path"
+                        class="sidebar__navigation-link"
+                    >
+                        {{ $t(`header.navigation.${route.name}`) }}
+                    </router-link>
+                </nav>
+                <hu-contact-info class="sidebar__contact-info"/>
             </div>
         </div>
     </Transition>
 </template>
 
 <script>
+import router from '@/router';
+
 export default {
     name: 'sidebar',
 
@@ -36,15 +62,39 @@ export default {
         };
     },
 
+    computed: {
+        routes() {
+            return router.getRoutes();
+        },
+    },
+
+    watch:{
+        $route(to, from) {
+            if (this.show && to !== from) {
+                window.scrollTo(0, 0);
+            }
+
+            this.$emit('close');
+        }
+    },
+
     methods: {
         onClose() {
             this.$emit('close');
         },
-    },
+
+        updateLanguageLocale(locale = 'de-DE') {
+            this.$i18n.locale = locale;
+
+            this.$emit('update-title');
+        },
+    }
 };
 </script>
 
 <style lang="scss" scoped>
+
+$sidebar-border-style: 1px solid $color-tertiary;
 .sidebar {
     display: flex;
     position: fixed;
@@ -52,36 +102,76 @@ export default {
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
     overflow: hidden;
 
+    background-color: $color-tertiary;
     flex-direction: column;
 
     &__header {
         display: flex;
-        flex-direction: row;
         align-items: center;
 
-        width: 100%;
         padding: 24px;
-        
-        color: $color-secondary;
-        background-color: $color-tertiary;
 
-        &-button {
-            margin-right: 12px;
+        &-title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            
+            color: $color-secondary;
+            background-color: $color-tertiary;
 
-
+            &-button {
+                margin-right: 12px;
+            }
+            
+            &-text {
+                font-size: 24px;
+            }
         }
-        
-        &-text {
-            font-size: 24px;
+
+        &-language {
+            display: flex;
+            flex-direction: row;
+            height: 36px;
+            gap: 24px;
+            justify-content: flex-end;
+
+            &-flag {
+                padding: 0 18px;
+            }
         }
     }
 
-    &__content {
+    &__navigation {
         display: flex;
-        margin: 24px;
+        flex-direction: column;
+
+        width: 100%;
+
+        &-link {
+            width: 100%;
+            padding: 24px;
+            color: $color-tertiary;
+            border-bottom: $sidebar-border-style;
+
+            font-size: 24px;
+            background-color: $color-white;
+
+            &:first-child {
+                border-top: $sidebar-border-style;
+            }
+            
+            &.router-link-exact-active {
+                color: $color-white;
+                background-color: lighten($navigator-font-color-active, 0%);
+            }
+        }
+    }
+
+    &__contact-info {
+        margin-top: 24px;
     }
 }
 

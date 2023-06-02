@@ -2,8 +2,8 @@
     <v-app>
         <hu-contact-bar/>
         <hu-header
+            @open-sidebar="onOpenSidebar"
             @update-title="onUpdateTitle"
-            @openSidebar="onOpenSidebar"
         />
         <v-main>
             <router-view #default="{ Component }" class="main">
@@ -18,6 +18,7 @@
         <hu-sidebar
             :show="showSidebar"
             @close="onCloseSidebar"
+            @update-title="onUpdateTitle"
         />
     </v-app>
 </template>
