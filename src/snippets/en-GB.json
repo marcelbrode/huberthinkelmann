@@ -31,7 +31,9 @@
         "businessHours": "Mon - Fri: 8 AM - 12 PM {'|'} 1 PM - 6 PM"
     },
     "copyright-bar": {
-        "label": "2022 Marcel Brode"
+        "creatorLabel": "2022 Marcel Brode",
+        "legalNoticeLabel": "Legal notice",
+        "cookiePolicyLabel": "Cookie policy"
     },
     "cookie-consent": {
         "content": "This website uses cookies to provide the best possible experience.",

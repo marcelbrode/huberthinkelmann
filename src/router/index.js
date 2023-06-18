@@ -14,13 +14,19 @@ views.keys().forEach((filePath) => {
     };
 });
 
-const routeOrder = [
-    'home', 'about', 'services', 'contact'
-];
+const navigationRoutes = [
+    'home', 'about', 'services', 'contact',
+].map(route => routeComponents[route]);
+const hiddenRoutes = [
+    'legalNotice', 'cookiePolicy'
+].map(route => routeComponents[route]);
+const routes = [...navigationRoutes, ...hiddenRoutes];
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes:  routeOrder.map(route => routeComponents[route])
+    routes,
+    navigationRoutes,
+    hiddenRoutes
 });
 
 export default router;
