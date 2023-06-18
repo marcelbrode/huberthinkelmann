@@ -5,8 +5,8 @@
             @open-sidebar="onOpenSidebar"
             @update-title="onUpdateTitle"
         />
-        <v-main>
-            <router-view #default="{ Component }" class="main">
+        <v-main class="main">
+            <router-view #default="{ Component }" class="main__content">
                 <transition name="fade" mode="out-in">
                     <component :is="Component"/>
                 </transition>
@@ -91,12 +91,25 @@ a, a:visited, a:active {
 }
 
 .main {
-    min-height: 75vh;
-    background-color: #fff;
-    border-radius: 4px;
+    display: flex;
+
     margin: 12px 0;
     padding: 24px;
-    filter: $drop-shadow;
+
+    background-color: $color-white;
+    border-radius: 4px;
+    box-shadow: $drop-shadow;
+
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+
+        min-height: 75vh;
+        margin: 24px;
+
+        overflow: hidden;
+    }
 }
 
 .fade-enter-active,

@@ -1,8 +1,18 @@
 <template>
     <div class="copyright-bar">
         <div class="copyright-bar__container">
-            <v-icon class="copyright-bar__icon">mdi-copyright</v-icon>
-            <span class="copyright-bar__label">{{ $t('copyright-bar.label') }}</span>
+            <div class="copyright-bar__content-left">
+                <router-link class="copyright-bar__legal-notice copyright-bar__link" to="/legalNotice">
+                    {{ $t('copyright-bar.legalNoticeLabel') }}
+                </router-link>
+                <router-link class="copyright-bar__cookie-policy copyright-bar__link" to="/cookiePolicy">
+                    {{ $t('copyright-bar.cookiePolicyLabel') }}
+                </router-link>
+            </div>
+            <div class="copyright-bar__content-right">
+                <v-icon class="copyright-bar__creator-icon">mdi-copyright</v-icon>
+                <span class="copyright-bar__creator-label">{{ $t('copyright-bar.creatorLabel') }}</span>
+            </div>
         </div>
     </div>
 </template>
@@ -30,8 +40,17 @@ export default {
         width: $content-max-width;
 
         color: $color-secondary;
-        justify-content: right;
+        justify-content: space-between;
         gap: 3px;
+    }
+    
+    &__content-left > &__link:not(:last-child)::after {
+        content: "|";
+        padding: 6px;
+    }
+
+    &__link {
+        color: $color-white;
     }
 }
 </style>
