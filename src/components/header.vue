@@ -49,7 +49,7 @@ export default {
 
     computed: {
         routes() {
-            return router.getRoutes();
+            return router.options.navigationRoutes;
         },
 
         localeClasses() {
