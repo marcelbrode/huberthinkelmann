@@ -1,6 +1,14 @@
 <template>
     <div class="home-route">
-        <img class="home-route__card-image" src="title.jpg" />
+        <div class="home-route__content">
+            <hu-portrait src="portrait.jpg" secondarySrc="writing.jpg"/>
+            <hu-card class="home-route__content-card">
+                <h1>Lorem ipsum</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+            </hu-card>
+        </div>
     </div>
 </template>
 
@@ -15,13 +23,15 @@ export default {
     display: flex;
     justify-content: center;
 
-    &__card-image {
-    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
 
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
+        &-card {
+            text-align: justify;
+        }
     }
 }
 </style>
