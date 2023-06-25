@@ -57,14 +57,9 @@ export default {
         },
     },
 
-    data() {
-        return {
-        };
-    },
-
     computed: {
         routes() {
-            return router.getRoutes();
+            return router.options.navigationRoutes;
         },
     },
 

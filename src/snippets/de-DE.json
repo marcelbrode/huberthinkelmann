@@ -18,7 +18,9 @@
             "home": "Start",
             "about": "Über mich",
             "services": "Tätigkeitsfelder",
-            "contact": "Kontakt"
+            "contact": "Kontakt",
+            "legalNotice": "Impressum",
+            "cookiePolicy": "Cookie-Richtlinie"
         }
     },
     "footer": {
@@ -31,9 +33,7 @@
         "businessHours": "Mo - Fr: 08:00 - 12:00 {'|'} 13:00 - 18:00"
     },
     "copyright-bar": {
-        "creatorLabel": "2022 Marcel Brode",
-        "legalNoticeLabel": "Impressum",
-        "cookiePolicyLabel": "Cookie-Richtlinie"
+        "creatorLabel": "2022 Marcel Brode"
     },
     "cookie-consent": {
         "content": "Diese Website verwendet Cookies, um eine bestmögliche Erfahrung bieten zu können.",
