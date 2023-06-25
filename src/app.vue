@@ -98,7 +98,7 @@ a, a:visited, a:active {
 
     background-color: $color-white;
     border-radius: 4px;
-    box-shadow: $drop-shadow;
+    // box-shadow: $drop-shadow;
 
     overflow: hidden;
 
