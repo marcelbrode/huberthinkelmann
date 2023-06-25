@@ -18,7 +18,9 @@
             "home": "Home",
             "about": "About me",
             "services": "Services",
-            "contact": "Contact"
+            "contact": "Contact",
+            "legalNotice": "Legal notice",
+            "cookiePolicy": "Cookie policy"
         }
     },
     "footer": {
@@ -31,9 +33,7 @@
         "businessHours": "Mon - Fri: 8 AM - 12 PM {'|'} 1 PM - 6 PM"
     },
     "copyright-bar": {
-        "creatorLabel": "2022 Marcel Brode",
-        "legalNoticeLabel": "Legal notice",
-        "cookiePolicyLabel": "Cookie policy"
+        "creatorLabel": "2022 Marcel Brode"
     },
     "cookie-consent": {
         "content": "This website uses cookies to provide the best possible experience.",
