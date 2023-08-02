@@ -4,11 +4,7 @@
             <div class="footer__content">
                 <hu-contact-info/>
             </div>
-            <div class="footer__content">
-                <a :href="$t('general.personalInformation.googleMapsLink')" target="_blank">
-                    <div class="footer__map" />
-                </a>
-            </div>
+            <hu-map/>
         </div>
     </footer>
 </template>

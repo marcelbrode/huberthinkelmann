@@ -15,6 +15,10 @@
         <hu-footer/>
         <hu-copyright-bar/>
         <hu-cookie-consent/>
+        <hu-overlay
+            :show="showSidebar"
+            @click="showSidebar=false"
+        />
         <hu-sidebar
             :show="showSidebar"
             @close="onCloseSidebar"
@@ -98,7 +102,6 @@ a, a:visited, a:active {
 
     background-color: $color-white;
     border-radius: 4px;
-    // box-shadow: $drop-shadow;
 
     overflow: hidden;
 
