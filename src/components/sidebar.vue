@@ -1,6 +1,6 @@
 <template>
     <Transition>
-        <div v-if="show" class="sidebar">
+        <div v-show="show" class="sidebar">
             <div class="sidebar__header">
                 <div class="sidebar__header-title">
                     <v-btn
@@ -92,11 +92,11 @@ export default {
 $sidebar-border-style: 1px solid $color-tertiary;
 .sidebar {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     overflow: hidden;
 
     background-color: $color-tertiary;
@@ -180,4 +180,5 @@ $sidebar-border-style: 1px solid $color-tertiary;
     transform: translateX(100%);
     opacity: 0;
 }
+
 </style>
