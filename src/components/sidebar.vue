@@ -119,6 +119,7 @@ $sidebar-border-style: 1px solid $color-tertiary;
 
             &-button {
                 margin-right: 12px;
+                scale: 1.7;
             }
             
             &-text {
