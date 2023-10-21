@@ -73,7 +73,6 @@ export default {
 
 <style lang="scss" scoped>
 $logo-sizes: 250px 60px;
-
 .header {
     display: flex;
     justify-content: center;
@@ -92,15 +91,12 @@ $logo-sizes: 250px 60px;
     }
 
     &__logo {
-        background: url('@/assets/logo_de-DE.png') no-repeat;
+        // background: url('@/assets/logo.svg') no-repeat;
+        background: url('@/assets/logo.png') no-repeat;
         background-repeat: no-repeat;
         background-size: $logo-sizes;
         width: 250px;
         height: 60px;
-
-        &.is--en-GB {
-            background-image: url('@/assets/logo_en-GB.png');
-        }
     }
 
     &__menu {
@@ -130,6 +126,10 @@ $logo-sizes: 250px 60px;
     &__navigation {
         &-link {
             white-space: nowrap;
+        }
+
+        &-mobile {
+            scale: 1.7;
         }
 
         a {

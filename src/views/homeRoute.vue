@@ -1,7 +1,7 @@
 <template>
     <div class="home-route">
         <div class="home-route__content">
-            <hu-portrait src="portrait.jpg" secondarySrc="writing.jpg"/>
+            <hu-portrait src="assets/portrait.jpg" secondarySrc="assets/writing.jpg"/>
             <hu-card class="home-route__content-card">
                 <h1>Lorem ipsum</h1>
                 <p>
