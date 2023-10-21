@@ -92,20 +92,21 @@ export default {
 $sidebar-border-style: 1px solid $color-tertiary;
 .sidebar {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
 
-    background-color: $color-tertiary;
+    background-color: rgba(#000, 0.2);
     flex-direction: column;
+    backdrop-filter: blur(5px);
 
     &__header {
         display: flex;
         align-items: center;
-
+        background-color: $color-tertiary;
         padding: 24px;
 
         &-title {
@@ -138,6 +139,10 @@ $sidebar-border-style: 1px solid $color-tertiary;
                 padding: 0 18px;
             }
         }
+    }
+
+    &__header, &__content {
+        background-color: $color-tertiary;
     }
 
     &__navigation {
