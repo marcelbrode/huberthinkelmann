@@ -73,6 +73,7 @@ export default {
 
 <style lang="scss" scoped>
 $logo-sizes: 250px 60px;
+
 .header {
     display: flex;
     justify-content: center;

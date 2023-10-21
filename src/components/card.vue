@@ -12,20 +12,26 @@
 
 <script>
 export default {
-    name: 'Card'
+    name: 'Card',
+
+    props: {
+        // ToDo - Implement
+        height: {
+            type: String,
+            required: false,
+            default: '450px',
+        },
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 .card {
     position: relative;
-    height: 550px;
-    width: 400px;
+    height: 725px;
+    width: 550px;
 
     overflow: hidden;
-
-    // ToDo: Remove after debug
-    // border: 2px solid black;
 
     &__decoration {
         position: absolute;
@@ -53,8 +59,8 @@ export default {
 
         &-wrapper {
             position: absolute;
-            height: 450px;
-            width: 300px;
+            height: 625px;
+            width: 450px;
             margin: 48px;
 
             border: 8px solid $color-white;
