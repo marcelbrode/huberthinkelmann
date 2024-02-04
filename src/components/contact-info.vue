@@ -31,7 +31,7 @@
                     <div class="contact-info__contact-mail contact-info__contact-item">
                         <v-icon class="contact-bar__icon">mdi-email</v-icon>
                         <span class="contact-bar__label">
-                            <a :href="`mailto:${$t('general.personalInformation.phone')}`">
+                            <a :href="`mailto:${$t('general.personalInformation.mail')}`">
                                 {{ $t('general.personalInformation.mail') }}
                             </a>
                         </span>
