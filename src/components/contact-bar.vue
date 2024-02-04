@@ -4,13 +4,17 @@
             <div class="contact-bar__phone contact-bar__element">
                 <v-icon class="contact-bar__icon">mdi-phone</v-icon>
                 <div class="contact-bar__phone-content">
-                    {{ $t('general.personalInformation.phone') }}
+                    <a :href="`tel:${this.$t('general.personalInformation.phone')}`">
+                        {{ $t('general.personalInformation.phone') }}
+                    </a>
                 </div>
             </div>
             <div class="contact-bar__mail contact-bar__element">
                 <v-icon class="contact-bar__icon">mdi-email</v-icon>
                 <div class="contact-bar__mail-content">
-                    {{ $t('general.personalInformation.mail') }}
+                    <a :href="'mailto://' + $t('general.personalInformation.mail')">
+                        {{ $t('general.personalInformation.mail') }}
+                    </a>
                 </div>
             </div>
             <div class="contact-bar__business-hours contact-bar__element d-none d-md-flex">
@@ -56,6 +60,11 @@ export default {
 
         > .contact-bar__icon {
             margin: 0 6px;
+        }
+
+        a {
+            color: $color-secondary;
+            text-decoration: none;
         }
     }
 }
