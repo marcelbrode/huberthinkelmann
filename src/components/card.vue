@@ -1,8 +1,8 @@
 <template>
-    <div class="card">
+    <div class="card" :class="classes">
         <div class="card__decoration is--top"></div>
         <div class="card__decoration is--bottom"></div>
-        <div class="card__content-wrapper"> 
+        <div class="card__content-wrapper" :class="classes"> 
             <div class="card__content"> 
                 <slot></slot>
             </div>
@@ -15,23 +15,44 @@ export default {
     name: 'Card',
 
     props: {
-        // ToDo - Implement
-        height: {
-            type: String,
+        isWide: {
+            type: Boolean,
             required: false,
-            default: '450px',
+            default: false,
         },
-    }
+
+        isSecondary: {
+            type: Boolean,
+            required: false,
+            default: false,
+        },
+    },
+
+    computed: {
+        classes() {
+            return {
+                'is--wide': this.isWide,
+                'is--secondary': this.isSecondary,
+            };
+        },
+    },
 }
 </script>
 
 <style lang="scss" scoped>
 .card {
     position: relative;
-    height: 725px;
+    height: 750px;
     width: 550px;
 
     overflow: hidden;
+    &.is--wide {
+        width: 1100px;
+    }
+
+    &.is--secondary {
+        // background-color: green;
+    }
 
     &__decoration {
         position: absolute;
@@ -55,11 +76,12 @@ export default {
     }
     
     &__content {
-        height: 450px;
+        height: 475px;
+        padding: 0 8px;
 
         &-wrapper {
             position: absolute;
-            height: 625px;
+            height: 650px;
             width: 450px;
             margin: 48px;
 
@@ -67,6 +89,10 @@ export default {
             background-color: $color-white;
 
             overflow: hidden;
+        
+            &.is--wide {
+                width: 1000px;
+            }
         }
     }
 }
