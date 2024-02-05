@@ -1,13 +1,15 @@
 <template>
-    <div class="portrait">
+    <div class="portrait" :class="classes">
         <div class="portrait__decoration"></div>
         <img
             class="portrait__main"
+            :class="classes"
             :src="src"
         />
         <img
             v-if="secondarySrc"
             class="portrait__secondary-image"
+            :class="classes"
             :src="secondarySrc"
         />
     </div>
@@ -27,8 +29,22 @@ export default {
             type: String,
             required: false,
             default: null,
-        }
-    }
+        },
+
+        isMirrored: {
+            type: Boolean,
+            required: false,
+            default: false,
+        },
+    },
+
+    computed: {
+        classes() {
+            return {
+                'is--mirrored': this.isMirrored,
+            };
+        },
+    },
 }
 </script>
 
@@ -40,8 +56,9 @@ export default {
 
     overflow: hidden;
 
-    // ToDo: Remove after debug
-    // border: 2px solid black;
+    &.is--mirrored {
+        transform: scaleX(-1);
+    }
 
     &__decoration {
         position: absolute;
@@ -64,8 +81,11 @@ export default {
         margin: 48px;
 
         object-fit: cover;
-
         border: 8px solid $color-white;
+
+        &.is--mirrored {
+            transform: scaleX(-1);
+        }
     }
     
     &__secondary-image {
@@ -76,8 +96,11 @@ export default {
         right: 25px;
 
         object-fit: cover;
-
         border: 4px solid $color-white;
+
+        &.is--mirrored {
+            transform: scaleX(-1);
+        }
     }
 }
 </style>
