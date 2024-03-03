@@ -1,62 +1,40 @@
 <template>
   <div class="about-route">
     <div class="about-route__content">
-      <hu-card class="about-route__content-card">
-        <h1>{{ $t('content.title.about') }}</h1>
-        <div class="about-route__content-card-cv">
-          <h3>{{ $t('content.title.aboutTraining') }}</h3>
-          <div class="about-route__content-card-cv-bullet">
-            <li
+      <v-card class="about-route__content-card">
+        <v-card-title>{{ $t('content.title.about') }}</v-card-title>
+        <div class="about-route__content-card-training about-route__content-section">
+          <v-card-subtitle>{{ $t('content.title.aboutTraining') }}</v-card-subtitle>
+          <v-list lines="two">
+            <v-list-item
               v-for="entry in trainingEntries"
               :key="entry"
+              class="about-route__content-card-entry"
+              :title="entry.split(';')[1]"
+              :subtitle="entry.split(';')[0]"
             >
-              <div
-                v-for="column in entry.split(';')"
-                :key="column"
-              >
-                {{ column }}
-              </div>
-            </li>          
-          </div>
-          <div class="about-route__content-card-cv-bullet">
-            <h3>{{ $t('content.title.aboutPractice') }}</h3>
-            <li
+              <template v-slot:title="{ title }">
+                <div v-html="title" class="text-wrap text-left"></div>
+              </template>
+            </v-list-item>
+          </v-list>
+        </div>
+        <div class="about-route__content-card-practice about-route__content-section">
+          <v-card-subtitle>{{ $t('content.title.aboutPractice') }}</v-card-subtitle>
+          <v-list lines="two">
+            <v-list-item
               v-for="entry in practiceEntries"
               :key="entry"
+              :title="entry.split(';')[1]"
+              :subtitle="entry.split(';')[0]"
             >
-              <div
-                v-for="column in entry.split(';')"
-                :key="column"
-              >
-                {{ column }}
-              </div>
-            </li>
-          </div>
-          <!-- <h3>Berufspraxis</h3> -->
-          <!-- <div class="about-route__content-card-cv-bullet">
-            <li>
-              <div>1997-2000</div>
-              <div>Tätigkeit als Rechtsanwalt und Rechtsberater für einen Mieterverein in Dessau</div>
-            </li>
-            <li>
-              <div>Seit 2001</div>
-              <div>Selbständig in eigener Kanzlei tätig</div>
-            </li>
-            <li>
-              <div>Seit 2005</div>
-              <div>Zulassung als Rechtsanwalt am OLG Hamm</div>
-            </li>
-            <li>
-              <div>Seit 2011</div>
-              <div>Fachanwalt für Miet- und WEG-Recht</div>
-            </li>
-            <li>
-              <div>Seit 2014</div>
-              <div>Fachanwalt für Sozialrecht</div>
-            </li>
-          </div> -->
+              <template #title="{ title }">
+                <div v-html="title" class="text-wrap text-left"></div>
+              </template>
+            </v-list-item>
+          </v-list>
         </div>
-      </hu-card>
+      </v-card>
       <hu-portrait
         src="assets/portrait.jpg"
         is-mirrored
@@ -91,49 +69,35 @@ export default {
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    white-space: pre-wrap;
 
     &-card {
+      max-width: 50%;
+      padding: $spacer-md $spacer-xl;
       text-align: justify;
+      background-color: lighten($color-accent, 10%);
+    }
+    
+    &-section {
+      border-left: 2px solid $color-highlight;
+      padding: 0;
+      margin: $spacer-xl $spacer-sm;
+    }
+  }
 
-      &-cv {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+  .v-list {
+    background-color: transparent;
+  }
+}
 
-        &-bullet {
-          margin-left: 4px;
-          // border-left: 1px solid #000;
-
-          > li {
-            // border-left: 1px solid #000;
-            // transform: translateX(-3px);
-
-            &::marker {
-              content: '▶';
-              font-size: 18px;
-            }
-
-            &:last-child {
-              border-left: none;
-            }
-          }
-        }
-
-        li > div {
-          display: inline-block;
-          width: 90%;
-          // transform: translateX(-12px);
-          // border-left: 1px solid #000;
-
-          &:first-child {
-            font-weight: bold;
-          }
-
-          &:not(:first-child) {
-            margin-left: 29px;
-          }
-        }
-      }
+@media only screen and (max-width: 1000px) {
+  .about-route {
+    &__content-card {
+      max-width: 80%;
+    }
+    .v-card-text {
+      padding: 0;
+      padding-bottom: $spacer-md;
     }
   }
 }

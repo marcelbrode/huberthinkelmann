@@ -64,7 +64,7 @@ export default {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .footer {
         &__container {
             width: 100vw;
