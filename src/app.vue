@@ -97,8 +97,8 @@ a, a:visited, a:active {
 .main {
     display: flex;
 
-    margin: 12px 0;
-    padding: 24px;
+    // margin: 12px 0;
+    // padding: 24px;
 
     background-color: $color-white;
     border-radius: 4px;
@@ -123,5 +123,11 @@ a, a:visited, a:active {
 .fade-enter-from,
 .fade-leave-active {
     opacity: 0;
+}
+
+@media only screen and (max-width: 400px) {
+    #app {
+        width: 105vw;
+    }
 }
 </style>
