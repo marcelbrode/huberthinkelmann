@@ -30,4 +30,14 @@ export default {
         border-radius: 6px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .map {
+        &__content {
+            width: 300px;
+            height: 300px;
+            background-size: 300px 300px;
+        }
+    }
+}
 </style>

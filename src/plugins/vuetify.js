@@ -4,7 +4,6 @@ import 'vuetify/styles';
 
 // Vuetify
 import { createVuetify } from 'vuetify';
-// import type { ThemeDefinition } from 'vuetify';
 
 const huCustomTheme = {
   dark: false,

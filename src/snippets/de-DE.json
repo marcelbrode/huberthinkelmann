@@ -3,6 +3,7 @@
         "title": "Rechtsanwaltskanzlei Hubert Hinkelmann",
         "accept": "Zustimmen",
         "decline": "Ablehnen",
+        "close": "Schließen",
         "personalInformation": {
             "title": "Rechtsanwaltskanzlei Hubert Hinkelmann",
             "address": "Grevener Straße 17\n48149 Münster",
@@ -18,11 +19,33 @@
             "home": "Hubert Hinkelmann",
             "about": "Über mich",
             "aboutTraining": "Ausbildung",
-            "aboutPractice": "Berufserfahrung"
+            "aboutPractice": "Berufserfahrung",
+            "services": "Tätigkeitsspektrum"
         },
-        "home": "Fachanwalt für: <strong>Miet- und WEG-Recht / Sozialrecht</strong><br/><br/>Die Kanzlei ist aufgrund der Berufserfahrungen des Herrn Rechtsanwalt Hubert Hinkelmann vorwiegend zivil- und sozialrechtlich ausgerichtet und wendet sich an private und gewerbliche Mandantschaft.<br/><br/>Das Tätigkeitsspektrum umfasst die außergerichtliche Beratung, Vertretung und Vertragsgestaltung, wie die Prozessführung einschließlich einer eventuell notwendigen, anschließenden Zwangsvollstreckung.<br/><br/>Kostentransparenz stellt dabei ein wichtiges Element in der anwaltlichen Beratung dar. Vor der Übertragung eines Mandates und vor der Einleitung weiterer Maßnahmen werden Ihnen die anfallenden Kosten ausführlich dargelegt.<br/><br/>Ständige Fortbildungen, der Einsatz moderner und zeitgemäßer EDV und Bürotechnik, eine gut ausgestattete und ständig aktualisierte juristische Bibliothek sowie der Anschluss an das Internet versetzen die Kanzlei als Dienstleistungsunternehmen in die Lage, die Interessen der Mandanten zügig und zuverlässig wahrzunehmen.",
+        "subtitle": {
+            "home": "Fachanwalt für: Miet- und WEG-Recht / Sozialrecht"
+        },
+        "home": "Die Kanzlei ist aufgrund der Berufserfahrungen des Herrn Rechtsanwalt Hubert Hinkelmann vorwiegend zivil- und sozialrechtlich ausgerichtet und wendet sich an private und gewerbliche Mandantschaft.<br/><br/>Das Tätigkeitsspektrum umfasst die außergerichtliche Beratung, Vertretung und Vertragsgestaltung, wie die Prozessführung einschließlich einer eventuell notwendigen, anschließenden Zwangsvollstreckung.<br/><br/>Kostentransparenz stellt dabei ein wichtiges Element in der anwaltlichen Beratung dar. Vor der Übertragung eines Mandates und vor der Einleitung weiterer Maßnahmen werden Ihnen die anfallenden Kosten ausführlich dargelegt.<br/><br/>Ständige Fortbildungen, der Einsatz moderner und zeitgemäßer EDV und Bürotechnik, eine gut ausgestattete und ständig aktualisierte juristische Bibliothek sowie der Anschluss an das Internet versetzen die Kanzlei als Dienstleistungsunternehmen in die Lage, die Interessen der Mandanten zügig und zuverlässig wahrzunehmen.",
         "aboutTraining": "1986-1993;Jura-Studium an der WWU-Münster{'|'}1993-1996;Referendariat am Landgericht Münster",
-        "aboutPractice": ""
+        "aboutPractice": "1997-2000;Rechtsanwalt & Rechtsberater für einen Mieterverein in Dessau{'|'}Seit 2001;Selbständig in eigener Kanzlei tätig{'|'}Seit 2005;Zulassung als Rechtsanwalt am OLG Hamm{'|'}Seit 2011;Fachanwalt für Miet- und WEG-Recht{'|'}Seit 2014;Fachanwalt für Sozialrecht",
+        "services": {
+            "head": "Die Kanzlei ist aufgrund der Berufserfahrungen des Herrn Rechtsanwalt Hubert Hinkelmann vorwiegend zivil- und sozialrechtlich ausgerichtet und wendet sich an private und gewerbliche Mandantschaft.<br/><br/>Das Büro ist in einer Vielzahl von Rechtsgebieten tätig. Die Tätigkeitsschwerpunkte umfassen:",
+            "label": {
+                "social": "Sozialrecht",
+                "tenancyLeasehold": "Miet- und Pachtrecht",
+                "condominium": "Wohnungseigentumsrecht",
+                "traffic": "Verkehrsrecht",
+                "labour": "Arbeitsrecht"
+            },
+            "content": {
+                "social": "Sozialrecht",
+                "tenancyLeasehold": "Miet- und Pachtrecht",
+                "condominium": "Wohnungseigentumsrecht (WEG-Recht)",
+                "traffic": "Verkehrsrecht",
+                "labour": "Arbeitsrecht"
+            },
+            "bottom": "Das Tätigkeitsspektrum umfasst die außergerichtliche Beratung, Vertretung und Vertragsgestaltung, wie die Prozessführung einschließlich einer eventuell notwendigen, anschließenden Zwangsvollstreckung.<br/><br/>Kostentransparenz stellt dabei ein wichtiges Element in der anwaltlichen Beratung dar. Vor der Übertragung eines Mandates und vor der Einleitung weiterer Maßnahmen werden Ihnen die anfallenden Kosten ausführlich dargelegt.<br/><br/>Ständige Fortbildungen, der Einsatz moderner und zeitgemäßer EDV und Bürotechnik, eine gut ausgestattete und ständig aktualisierte juristische Bibliothek sowie der Anschluss an das Internet versetzen die Kanzlei als Dienstleistungsunternehmen in die Lage, die Interessen der Mandanten zügig und zuverlässig wahrzunehmen."
+        }
     },
     "header": {
         "navigation": {
