@@ -1,8 +1,7 @@
 {
     "general": {
         "title": "Rechtsanwaltskanzlei Hubert Hinkelmann",
-        "accept": "Zustimmen",
-        "decline": "Ablehnen",
+        "accept": "OK",
         "close": "Schließen",
         "personalInformation": {
             "title": "Rechtsanwaltskanzlei Hubert Hinkelmann",
@@ -32,15 +31,8 @@
             "head": "Die Kanzlei ist aufgrund der Berufserfahrungen des Herrn Rechtsanwalt Hubert Hinkelmann vorwiegend zivil- und sozialrechtlich ausgerichtet und wendet sich an private und gewerbliche Mandantschaft.<br/><br/>Das Büro ist in einer Vielzahl von Rechtsgebieten tätig. Die Tätigkeitsschwerpunkte umfassen:",
             "label": {
                 "social": "Sozialrecht",
-                "tenancyLeasehold": "Miet- und Pachtrecht",
+                "tenancy-leasehold": "Miet- und Pachtrecht",
                 "condominium": "Wohnungseigentumsrecht",
-                "traffic": "Verkehrsrecht",
-                "labour": "Arbeitsrecht"
-            },
-            "content": {
-                "social": "Sozialrecht",
-                "tenancyLeasehold": "Miet- und Pachtrecht",
-                "condominium": "Wohnungseigentumsrecht (WEG-Recht)",
                 "traffic": "Verkehrsrecht",
                 "labour": "Arbeitsrecht"
             },
@@ -54,7 +46,7 @@
             "services": "Tätigkeitsfelder",
             "contact": "Kontakt",
             "legalNotice": "Impressum",
-            "cookiePolicy": "Cookie-Richtlinie"
+            "copyright": "Datenschutz"
         }
     },
     "footer": {
@@ -70,7 +62,7 @@
         "creatorLabel": "2022 Marcel Brode"
     },
     "cookie-consent": {
-        "content": "Diese Website verwendet Cookies, um eine bestmögliche Erfahrung bieten zu können.",
+        "content": "Diese Website verwendet ausschließlich technisch notwendige Cookies, um eine bestmögliche Erfahrung bieten zu können.",
         "moreInformationLink": "Mehr Informationen"
     }
 }

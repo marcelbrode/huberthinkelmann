@@ -15,10 +15,10 @@ views.keys().forEach((filePath) => {
 });
 
 const navigationRoutes = [
-    'home', 'about', 'services', 'contact',
+    'home', 'about', 'services',
 ].map(route => routeComponents[route]);
 const hiddenRoutes = [
-    'legalNotice', 'cookiePolicy'
+    'legalNotice', 'copyright'
 ].map(route => routeComponents[route]);
 const routes = [...navigationRoutes, ...hiddenRoutes];
 

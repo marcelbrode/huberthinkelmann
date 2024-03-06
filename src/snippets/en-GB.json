@@ -1,8 +1,7 @@
 {
     "general": {
         "title": "Hubert Hinkelmann – Attorney at law",
-        "accept": "Accept",
-        "decline": "Decline",
+        "accept": "OK",
         "close": "Close",
         "personalInformation": {
             "title": "Hubert Hinkelmann – Attorney at law",
@@ -32,17 +31,10 @@
             "head": "Due to Mr Hubert Hinkelmann's professional experience, the law firm focuses primarily on civil and social law and is aimed at private and commercial clients.<br/><br/>The office is active in a variety of legal fields. The main areas of practice include:",
             "label": {
                 "social": "Social law",
-                "tenancyLeasehold": "Tenancy and lease law",
+                "tenancy-leasehold": "Tenancy and lease law",
                 "condominium": "Condominium Law",
                 "traffic": "Traffic law",
                 "labour": "Labour law"
-            },
-            "content": {
-                "social": "Sozialrecht",
-                "tenancyLeasehold": "Miet- und Pachtrecht",
-                "condominium": "Wohnungseigentumsrecht (WEG-Recht)",
-                "traffic": "Verkehrsrecht",
-                "labour": "Arbeitsrecht"
             },
             "bottom": "The range of activities includes out-of-court advice, representation and contract drafting, as well as litigation, including any necessary subsequent enforcement proceedings.<br/><br/>Cost transparency is an important element of legal advice. Before a mandate is transferred and before further measures are initiated, the costs incurred will be explained to you in detail.<br/><br/>Continuous further training, the use of modern and up-to-date IT and office technology, a well-equipped and constantly updated legal library and internet access enable the law firm as a service provider to represent the interests of its clients quickly and reliably."
         }
@@ -54,7 +46,7 @@
             "services": "Services",
             "contact": "Contact",
             "legalNotice": "Legal notice",
-            "cookiePolicy": "Cookie policy"
+            "copyright": "Copyright"
         }
     },
     "footer": {
@@ -70,7 +62,7 @@
         "creatorLabel": "2022 Marcel Brode"
     },
     "cookie-consent": {
-        "content": "This website uses cookies to provide the best possible experience.",
+        "content": "This website uses only technically required cookies to provide the best possible experience.",
         "moreInformationLink": "More information"
     }
 }
