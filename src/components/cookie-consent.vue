@@ -11,19 +11,12 @@
                     </p>
                     <router-link
                         class="cookie-consent__legal-link"
-                        to="/cookiePolicy"
+                        to="/copyright"
                     >
                         {{ $t('cookie-consent.moreInformationLink') }}
                     </router-link>
                 </div>
                 <div class="cookie-consent__actions d-flex justify-center flex-column flex-md-row">
-                    <v-btn
-                        class="cookie-consent_actions-decline ma-2"
-                        color="secondary"
-                        @click="onDecline"
-                    >
-                        {{ $t('general.decline') }}
-                    </v-btn>
                     <v-btn
                         class="cookie-consent_actions-accept ma-2"
                         @click="onConfirm"
@@ -57,11 +50,6 @@ export default {
 
         onConfirm() {
             localStorage.grantedCookieConsent = true;
-            this.showConsentModal = false;
-        },
-
-        onDecline() {
-            localStorage.grantedCookieConsent = false;
             this.showConsentModal = false;
         },
     },

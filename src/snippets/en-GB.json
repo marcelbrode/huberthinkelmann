@@ -1,8 +1,7 @@
 {
     "general": {
         "title": "Hubert Hinkelmann – Attorney at law",
-        "accept": "Accept",
-        "decline": "Decline",
+        "accept": "OK",
         "close": "Close",
         "personalInformation": {
             "title": "Hubert Hinkelmann – Attorney at law",
@@ -54,7 +53,7 @@
             "services": "Services",
             "contact": "Contact",
             "legalNotice": "Legal notice",
-            "cookiePolicy": "Cookie policy"
+            "copyright": "Copyright"
         }
     },
     "footer": {
@@ -70,7 +69,7 @@
         "creatorLabel": "2022 Marcel Brode"
     },
     "cookie-consent": {
-        "content": "This website uses cookies to provide the best possible experience.",
+        "content": "This website uses only technically required cookies to provide the best possible experience.",
         "moreInformationLink": "More information"
     }
 }

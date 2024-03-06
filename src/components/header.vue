@@ -92,7 +92,6 @@ $logo-sizes: 250px 60px;
   }
 
   &__logo {
-    // background: url('@/assets/logo.svg') no-repeat;
     background: url('@/assets/logo.svg') no-repeat;
     background-repeat: no-repeat;
     background-size: $logo-sizes;

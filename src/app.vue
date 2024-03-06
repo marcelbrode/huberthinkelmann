@@ -97,9 +97,6 @@ a, a:visited, a:active {
 .main {
     display: flex;
 
-    // margin: 12px 0;
-    // padding: 24px;
-
     background-color: $color-white;
     border-radius: 4px;
 
@@ -113,6 +110,10 @@ a, a:visited, a:active {
 
         overflow: hidden;
     }
+}
+
+.v-expansion-panel-text {
+    display: block;
 }
 
 .fade-enter-active,

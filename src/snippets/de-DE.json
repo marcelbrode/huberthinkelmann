@@ -1,8 +1,7 @@
 {
     "general": {
         "title": "Rechtsanwaltskanzlei Hubert Hinkelmann",
-        "accept": "Zustimmen",
-        "decline": "Ablehnen",
+        "accept": "OK",
         "close": "Schließen",
         "personalInformation": {
             "title": "Rechtsanwaltskanzlei Hubert Hinkelmann",
@@ -38,7 +37,7 @@
                 "labour": "Arbeitsrecht"
             },
             "content": {
-                "social": "Sozialrecht",
+                "social": "LoremIpsumLoremIpsumLoremIpsumLoremIpsumLoremIpsumLoremIpsumLoremIpsumLoremIpsumLoremIpsumLoremIpsumLoremIpsumLoremIpsum",
                 "tenancyLeasehold": "Miet- und Pachtrecht",
                 "condominium": "Wohnungseigentumsrecht (WEG-Recht)",
                 "traffic": "Verkehrsrecht",
@@ -54,7 +53,7 @@
             "services": "Tätigkeitsfelder",
             "contact": "Kontakt",
             "legalNotice": "Impressum",
-            "cookiePolicy": "Cookie-Richtlinie"
+            "copyright": "Datenschutz"
         }
     },
     "footer": {
@@ -70,7 +69,7 @@
         "creatorLabel": "2022 Marcel Brode"
     },
     "cookie-consent": {
-        "content": "Diese Website verwendet Cookies, um eine bestmögliche Erfahrung bieten zu können.",
+        "content": "Diese Website verwendet ausschließlich technisch notwendige Cookies, um eine bestmögliche Erfahrung bieten zu können.",
         "moreInformationLink": "Mehr Informationen"
     }
 }
