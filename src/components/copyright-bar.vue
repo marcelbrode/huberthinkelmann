@@ -5,8 +5,8 @@
                 <router-link class="copyright-bar__legal-notice copyright-bar__link" to="/legalNotice">
                     {{ $t('header.navigation.legalNotice') }}
                 </router-link>
-                <router-link class="copyright-bar__cookie-policy copyright-bar__link" to="/cookiePolicy">
-                    {{ $t('header.navigation.cookiePolicy') }}
+                <router-link class="copyright-bar__copyright copyright-bar__link" to="/copyright">
+                    {{ $t('header.navigation.copyright') }}
                 </router-link>
             </div>
             <div class="copyright-bar__content-right">
