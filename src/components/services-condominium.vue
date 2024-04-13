@@ -1,6 +1,6 @@
 <template>
     <div class="services-condominium">
-        asdf
+        ServicesCondominium
     </div>
 </template>
 

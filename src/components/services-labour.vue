@@ -1,6 +1,6 @@
 <template>
     <div class="services-labour">
-        asdf
+        ServicesLabour
     </div>
 </template>
 

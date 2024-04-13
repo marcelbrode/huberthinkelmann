@@ -2,7 +2,10 @@
   <div class="home-route">
     <div class="home-route__content">
       <hu-portrait src="assets/office.jpg" secondarySrc="assets/writing.jpg"/>
-      <v-card class="home-route__content-card">
+      <v-card
+        class="home-route__content-card"
+        variant="text"
+      >
         <v-card-title>{{ $t('content.title.home') }}</v-card-title>
         <v-card-subtitle>{{ $t('content.subtitle.home') }}</v-card-subtitle>
         <v-card-text v-html="$t('content.home')"></v-card-text>
@@ -29,10 +32,9 @@ export default {
     flex-wrap: wrap;
 
     &-card {
-      max-width: 50%;
+      max-width: 60%;
       padding: 12px 24px;
       text-align: justify;
-      background-color: lighten($color-accent, 10%);
     }
   }
 

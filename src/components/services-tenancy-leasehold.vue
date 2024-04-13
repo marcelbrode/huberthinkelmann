@@ -1,6 +1,6 @@
 <template>
     <div class="services-tenancy-leasehold">
-        asdf
+        ServicesTenancyLeasehold
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="services-traffic">
-        asdf
+        ServicesTraffic
     </div>
 </template>
 

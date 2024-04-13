@@ -72,6 +72,11 @@ export default {
 <style lang="scss">
 @import url('@/assets/_variables.scss');
 
+@font-face {
+  font-family: Dortmund;
+  src: url('@/assets/fonts/dortmund.otf');
+}
+
 * {
     margin: 0;
 }
@@ -94,6 +99,22 @@ a, a:visited, a:active {
     width: $content-max-width;
 }
 
+.v-card {
+    .v-card-text {
+        color: $color-accent;
+    }
+
+    .v-card-title, .v-card-subtitle {
+        color: $color-accent;
+        font-size: 32px;
+        font-family: Dortmund, sans-serif;
+    }
+
+    .v-card-subtitle {
+        font-size: 16px;
+    }
+}
+
 .main {
     display: flex;
 
@@ -106,7 +127,7 @@ a, a:visited, a:active {
         display: flex;
 
         min-height: 75vh;
-        margin: 24px;
+        // margin: 24px;
 
         overflow: hidden;
     }
