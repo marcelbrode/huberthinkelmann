@@ -10,7 +10,9 @@ const huCustomTheme = {
   colors: {
     background: '#FFFFFF',
     surface: '#314152',
-    primary: '#6200EE',
+    // surface: '#FFFFFF',
+    // primary: '#6200EE',
+    primary: '#ff00ff',
     'primary-darken-1': '#3700B3',
     secondary: '#FFFFFF',
     'secondary-darken-1': '#018786',
@@ -19,7 +21,7 @@ const huCustomTheme = {
     success: '#4CAF50',
     warning: '#FB8C00',
   }
-}
+};
 
 export default createVuetify({
   theme: {

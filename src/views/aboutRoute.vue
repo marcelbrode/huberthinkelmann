@@ -1,7 +1,10 @@
 <template>
   <div class="about-route">
     <div class="about-route__content">
-      <v-card class="about-route__content-card">
+      <v-card
+        class="about-route__content-card"
+        variant="text"
+      >
         <v-card-title>{{ $t('content.title.about') }}</v-card-title>
         <div class="about-route__content-card-training about-route__content-section">
           <v-card-subtitle>{{ $t('content.title.aboutTraining') }}</v-card-subtitle>
@@ -13,9 +16,9 @@
               :title="entry.split(';')[1]"
               :subtitle="entry.split(';')[0]"
             >
-              <template v-slot:title="{ title }">
+              <!-- <template #title="{ title }">
                 <div v-html="title" class="text-wrap text-left"></div>
-              </template>
+              </template> -->
             </v-list-item>
           </v-list>
         </div>
@@ -25,6 +28,7 @@
             <v-list-item
               v-for="entry in practiceEntries"
               :key="entry"
+              class="about-route__content-card-entry"
               :title="entry.split(';')[1]"
               :subtitle="entry.split(';')[0]"
             >
@@ -72,10 +76,13 @@ export default {
     white-space: pre-wrap;
 
     &-card {
-      max-width: 50%;
+      max-width: 60%;
       padding: $spacer-md $spacer-xl;
       text-align: justify;
-      background-color: lighten($color-accent, 10%);
+
+      &-entry {
+        color: $color-accent;
+      }
     }
     
     &-section {
@@ -87,6 +94,14 @@ export default {
 
   .v-list {
     background-color: transparent;
+  }
+
+  .v-card-title, .v-card-subtitle {
+    white-space: pre-wrap;
+  }
+
+  .v-card-subtitle {
+    opacity: 1;
   }
 }
 
