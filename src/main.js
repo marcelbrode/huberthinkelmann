@@ -7,6 +7,7 @@ import countryFlag from 'vue3-country-flag-icon';
 import 'vue3-country-flag-icon/dist/CountryFlag.css';
 import { loadFonts } from '@/plugins/webfontloader';
 import messages from '@/plugins/snippetloader';
+import '@/assets/main.css';
 
 const app = createApp(App);
 const i18n = createI18n({

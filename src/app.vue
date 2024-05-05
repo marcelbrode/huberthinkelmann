@@ -70,12 +70,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('~@/assets/_variables.scss');
-
-@font-face {
-  font-family: Dortmund;
-  src: url('~@/assets/fonts/dortmund.otf');
-}
+@import url('@/assets/_variables.scss');
 
 * {
     margin: 0;

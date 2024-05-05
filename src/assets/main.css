@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Dortmund';
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local('Dortmund'), url('fonts/dortmund.otf') format('opentype');
+}
