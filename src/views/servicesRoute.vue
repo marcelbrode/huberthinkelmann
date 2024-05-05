@@ -13,10 +13,10 @@
           <v-btn
             v-for="(service, key) in services"
             :key="key"
-            :class="`services-route__content-card-button services-route__${serivce}`"
-            @click="toggleModal(service, true)"
+            :class="`services-route__content-card-button services-route__${service.name}`"
+            @click="toggleModal(service.name, true)"
           >
-            {{ $t(`content.services.label.${service}`) }}
+            {{ $t(`content.services.label.${service.name}`) }}
           </v-btn>
         </div>
         <v-card-text
@@ -32,26 +32,32 @@
     <v-dialog
       v-for="(service, key) in services"
       :key="key"
-      v-model="modals[service]"
-      :class="`services-route__modal-card services-route__${service}`"
+      v-model="modals[service.name]"
+      :class="`services-route__modal-card services-route__${service.name}`"
       width="auto"
     >
-      <!-- Icon -->
       <v-card
         class="services-route__modal-card"
+        max-height="750"
         max-width="1000"
-        prepend-icon="mdi-update"
-        :title="$t(`content.services.label.${service}`)"
+        color="secondary"
+        :prepend-icon="service.icon"
       >
+        <template #title>
+          <v-title class="text-wrap text-left">
+            {{ $t(`content.services.label.${service.name}`) }}
+          </v-title>
+        </template>
+
         <template #text>
-          <component :is="`hu-services-${service}`"/>
+          <component :is="`hu-services-${service.name}`"/>
         </template>
 
         <template #actions>
           <v-btn
             class="ms-auto"
             text="Ok"
-            @click="toggleModal(service, false)"
+            @click="toggleModal(service.name, false)"
           ></v-btn>
         </template>
       </v-card>
@@ -77,13 +83,22 @@ export default {
 
   computed: {
     services() {
-      return [
-        "social",
-        "tenancy-leasehold",
-        "condominium",
-        "traffic",
-        "labour",
-      ];
+      return [{
+        name: "social",
+        icon: "mdi-account-multiple"
+      }, {
+        name: "tenancy-leasehold",
+        icon: "mdi-land-plots-marker"
+      }, {
+        name: "traffic",
+        icon: "mdi-traffic-light"
+      }, {
+        name: "labour",
+        icon: "mdi-briefcase"
+      }, {
+        name: "condominium",
+        icon: "mdi-city-variant"
+      }];
     },
   },
 
@@ -127,6 +142,14 @@ export default {
         text-transform: none;
         color: $color-secondary;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .services-route {
+    &__content-card-button {
+      flex: 100%;
     }
   }
 }
