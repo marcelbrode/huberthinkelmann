@@ -16,9 +16,6 @@
               :title="entry.split(';')[1]"
               :subtitle="entry.split(';')[0]"
             >
-              <!-- <template #title="{ title }">
-                <div v-html="title" class="text-wrap text-left"></div>
-              </template> -->
             </v-list-item>
           </v-list>
         </div>
@@ -98,10 +95,6 @@ export default {
 
   .v-card-title, .v-card-subtitle {
     white-space: pre-wrap;
-  }
-
-  .v-card-subtitle {
-    opacity: 1;
   }
 }
 

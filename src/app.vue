@@ -70,11 +70,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('@/assets/_variables.scss');
+@import url('~@/assets/_variables.scss');
 
 @font-face {
   font-family: Dortmund;
-  src: url('@/assets/fonts/dortmund.otf');
+  src: url('~@/assets/fonts/dortmund.otf');
 }
 
 * {
@@ -99,9 +99,18 @@ a, a:visited, a:active {
     width: $content-max-width;
 }
 
+p {
+    margin-bottom: 16px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
 .v-card {
     .v-card-text {
         color: $color-accent;
+        overflow: auto;
     }
 
     .v-card-title, .v-card-subtitle {
@@ -112,6 +121,11 @@ a, a:visited, a:active {
 
     .v-card-subtitle {
         font-size: 16px;
+        opacity: 1;
+    }
+
+    .v-card-item__prepend {
+        color: $color-accent;
     }
 }
 
@@ -125,9 +139,7 @@ a, a:visited, a:active {
 
     &__content {
         display: flex;
-
         min-height: 75vh;
-        // margin: 24px;
 
         overflow: hidden;
     }
