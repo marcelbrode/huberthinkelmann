@@ -36,10 +36,13 @@
           </v-list>
         </div>
       </v-card>
-      <hu-portrait
-        src="assets/portrait.jpg"
-        is-mirrored
-      />
+      <div class="about-route__content-image">
+        <img
+          src="assets/hubert-office.png"
+          alt="Portrait"
+          class="about-route__content-image-src"
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -85,6 +88,11 @@ export default {
       border-left: 2px solid $color-highlight;
       padding: 0;
       margin: $spacer-xl $spacer-sm;
+    }
+
+    &-image-src {
+      width: 350px;
+      margin-left: 36px;
     }
   }
 

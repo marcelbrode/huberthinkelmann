@@ -69,7 +69,7 @@ export default {
         top: -125px;
 
         border: 150px solid transparent;
-        border-left: 150px solid $color-accent;
+        border-left: 150px solid $color-highlight;
         
         border-bottom: 1;
     }
