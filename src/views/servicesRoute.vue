@@ -122,7 +122,6 @@ export default {
     flex-wrap: wrap;
 
     &-card {
-      text-align: justify;
       width: 60%;
 
       &-text {

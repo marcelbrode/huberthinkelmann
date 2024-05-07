@@ -80,7 +80,6 @@ $logo-sizes: 250px 60px;
 
   background-color: $color-accent;
   color: $color-secondary;
-  filter: $drop-shadow;
 
   &__container {
     display: flex;

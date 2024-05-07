@@ -75,7 +75,6 @@ export default {
     &-card {
       max-width: 60%;
       padding: $spacer-md $spacer-xl;
-      text-align: justify;
 
       &-entry {
         color: $color-accent;

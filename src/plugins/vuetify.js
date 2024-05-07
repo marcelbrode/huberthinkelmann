@@ -1,8 +1,5 @@
-// Styles
 import '@mdi/font/css/materialdesignicons.css';
 import 'vuetify/styles';
-
-// Vuetify
 import { createVuetify } from 'vuetify';
 
 const huCustomTheme = {
@@ -10,9 +7,6 @@ const huCustomTheme = {
   colors: {
     background: '#FFFFFF',
     surface: '#314152',
-    // surface: '#FFFFFF',
-    // primary: '#6200EE',
-    primary: '#ff00ff',
     'primary-darken-1': '#3700B3',
     secondary: '#FFFFFF',
     'secondary-darken-1': '#018786',

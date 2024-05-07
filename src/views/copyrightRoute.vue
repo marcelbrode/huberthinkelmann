@@ -3,6 +3,8 @@
     <v-card
       title="Datenschutz"
       class="copyright-route__content"
+      color="secondary"
+      variant="text"
     >
       <div class="copyright-route__content-head">
         <v-card-text class="copyright-route__content-head-text">

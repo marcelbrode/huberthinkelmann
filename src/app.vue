@@ -134,7 +134,7 @@ p:last-child {
 
     &__content {
         display: flex;
-        min-height: 75vh;
+        padding: 24px 0;
 
         overflow: hidden;
     }

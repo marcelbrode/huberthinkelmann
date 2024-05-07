@@ -34,7 +34,6 @@ export default {
     &-card {
       max-width: 60%;
       padding: 12px 24px;
-      text-align: justify;
     }
   }
 

@@ -2,7 +2,7 @@ $color-primary: rgba(0, 0, 0, 0.8);
 $color-secondary: #eee;
 $color-tertiary: #333;
 
-$color-background: #f7f7f7;
+$color-background: #fff;
 $color-accent: #314152;
 $color-highlight: #42b983;
 
@@ -18,6 +18,10 @@ $spacer-xl: 2*$spacer-default;
 $drop-shadow:   0 1px 1px rgba(0,0,0,.08),
                 0 2px 1px rgba(0,0,0,.06),
                 0 1px 3px rgba(0,0,0,.4);
+
+$box-shadow:    0 11px 15px -7px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
+                0 24px 38px 3px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
+                0 9px 46px 8px var(--v-shadow-key-ambient-opacity, rgba(0, 0, 0, 0.12));
 
 $navigator-font-color: $color-secondary;
 $navigator-font-color-active: $color-highlight;

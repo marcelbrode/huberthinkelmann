@@ -5,20 +5,24 @@
             class="cookie-consent"
         >
             <div class="cookie-consent__content">
-                <div class="cookie-consent__legal d-flex flex-column justify-center flex-grow-3 flex-shrink-3">
-                    <p class="cookie-consent__legal-text font-weight-bold">
-                        {{ $t('cookie-consent.content') }}
-                    </p>
+                <div class="cookie-consent__content-legal">
+                    <div class="cookie-consent__content-legal-content">
+                        <v-icon size="x-large">mdi-cookie</v-icon>
+                        
+                        <p class="cookie-consent__content-legal-content-text">
+                            {{ $t('cookie-consent.content') }}
+                        </p>
+                    </div>
                     <router-link
-                        class="cookie-consent__legal-link"
+                        class="cookie-consent__content-legal-link"
                         to="/copyright"
                     >
                         {{ $t('cookie-consent.moreInformationLink') }}
                     </router-link>
                 </div>
-                <div class="cookie-consent__actions d-flex justify-center flex-column flex-md-row">
+                <div class="cookie-consent__content-actions">
                     <v-btn
-                        class="cookie-consent_actions-accept ma-2"
+                        class="cookie-consent__actions-accept ma-2"
                         @click="onConfirm"
                     >
                         {{ $t('general.accept') }}
@@ -60,23 +64,56 @@ export default {
 .cookie-consent {
     display: flex;
     position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
+    bottom: 0;
+    justify-content: center;
 
     flex-direction: row;
 
     &__content {
         display: flex;
-        width: 100%;
+        height: fit-content;
+        width: $content-max-width;
         margin: 24px;
         padding: 36px 24px;
 
         background-color: $color-background;
         justify-content: space-between;
+        align-items: center;
 
         border-radius: 12px;
-        filter: $drop-shadow;
+        box-shadow: $box-shadow;
+
+        &-legal {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 3;
+            gap: 12px;
+
+            &-icon {
+                display: flex;
+                height: 100%;
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: row;
+                gap: 12px;
+
+                &-text {
+                    font-weight: bolder;
+                }
+            }
+
+            &-link {
+                margin-left: 44px;
+            }
+        }
+
+        &-actions {
+            color: $color-white;
+        }
     }
 }
 
