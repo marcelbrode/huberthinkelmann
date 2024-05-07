@@ -11,7 +11,8 @@
             </div>
             <div class="copyright-bar__content-right">
                 <v-icon class="copyright-bar__creator-icon">mdi-copyright</v-icon>
-                <span class="copyright-bar__creator-label">{{ $t('copyright-bar.creatorLabel') }}</span>
+                <span class="copyright-bar__creator-label d-none d-sm-inline-block">{{ $t('copyright-bar.creatorLabel') }}</span>
+                <span class="copyright-bar__creator-label d-inline-block d-sm-none">{{ $t('copyright-bar.creatorLabelShort') }}</span>
             </div>
         </div>
     </div>
