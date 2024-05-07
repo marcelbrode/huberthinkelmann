@@ -5,6 +5,9 @@
         class="services-route__content-card"
         variant="text"
       >
+        <v-card-title class="services-route__content-card-title">
+          {{ $t('content.title.services') }}
+        </v-card-title>
         <v-card-text
           v-html="$t('content.services.head')"
           class="services-route__content-card-text"
@@ -24,10 +27,13 @@
           class="services-route__content-card-text"
         /> 
       </v-card>
-      <hu-portrait
-        src="assets/paragraph.png"
-        isMirrored
-      ></hu-portrait>
+      <div class="services-route__content-image">
+        <img
+          src="assets/justitia.png"
+          alt="Justitia"
+          class="services-route__content-image-src"
+        >
+      </div>
     </div>
     <v-dialog
       v-for="(service, key) in services"
@@ -124,6 +130,10 @@ export default {
     &-card {
       width: 60%;
 
+      &-title {
+        padding: 8px 0 24px;
+      }
+
       &-text {
         padding: 0;
       }
@@ -141,6 +151,11 @@ export default {
         text-transform: none;
         color: $color-secondary;
       }
+    }
+
+    &-image-src {
+      width: 350px;
+      margin-left: 36px;
     }
   }
 }

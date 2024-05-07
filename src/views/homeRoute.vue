@@ -1,7 +1,13 @@
 <template>
   <div class="home-route">
     <div class="home-route__content">
-      <hu-portrait src="assets/office.jpg" secondarySrc="assets/writing.jpg"/>
+      <div class="home-route__content-image">
+        <img
+          src="assets/hubert-title.png"
+          alt="Hubert Hinkelmann"
+          class="home-route__content-image-src"
+        >
+      </div>
       <v-card
         class="home-route__content-card"
         variant="text"
@@ -34,6 +40,11 @@ export default {
     &-card {
       max-width: 60%;
       padding: 12px 24px;
+    }
+    
+    &-image-src {
+      width: 350px;
+      margin-left: 36px;
     }
   }
 
