@@ -44,14 +44,10 @@ export default {
     position: relative;
     height: 750px;
     width: 550px;
-
     overflow: hidden;
+
     &.is--wide {
         width: 1100px;
-    }
-
-    &.is--secondary {
-        // background-color: green;
     }
 
     &__decoration {

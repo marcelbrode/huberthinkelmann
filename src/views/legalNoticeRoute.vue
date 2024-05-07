@@ -3,6 +3,8 @@
     <v-card
       title="Impressum"
       class="legal-notice-route__content"
+      color="secondary"
+      variant="text"
     >
       <div class="legal-notice-route__content-main">
         <v-card-subtitle class="legal-notice-route__content-main-subtitle">
@@ -96,6 +98,8 @@
     <v-card
       title="Hinweise"
       class="legal-notice-route__notices"
+      color="secondary"
+      variant="text"
     >
       <div class="legal-notice-route__notices-content">
         <v-card-subtitle class="legal-notice-route__notices-content-subtitle">
