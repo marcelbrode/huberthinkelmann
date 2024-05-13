@@ -41,15 +41,11 @@ export default {
       max-width: 60%;
       padding: 12px 24px;
     }
-    
+
     &-image-src {
       width: 350px;
       margin-left: 36px;
     }
-  }
-
-  .v-card-title, .v-card-subtitle {
-    white-space: pre-wrap;
   }
 }
 
@@ -61,6 +57,16 @@ export default {
     .v-card-text, .v-card-title, .v-card-subtitle {
       padding: 0;
       padding-bottom: $spacer-md;
+    }
+
+    &__content {
+      &-card {
+        max-width: unset;
+      }
+
+      &-image-src {
+        margin-left: unset;
+      }
     }
   }
 }

@@ -54,7 +54,7 @@ export default {
     },
 
     methods: {
-        onUpdateTitle() {     
+        onUpdateTitle() {
             document.title = `${this.translatedRoute} | ${this.$tc('general.title')}`;
         },
 
@@ -112,6 +112,7 @@ p:last-child {
         color: $color-accent;
         font-size: 32px;
         font-family: Dortmund, sans-serif;
+        white-space: pre-wrap;
     }
 
     .v-card-subtitle {
