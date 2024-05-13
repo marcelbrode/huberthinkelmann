@@ -75,13 +75,8 @@ export default {
     flex-wrap: wrap;
     white-space: pre-wrap;
 
-    &-card {
-      max-width: 60%;
-      padding: $spacer-md $spacer-xl;
-
-      &-entry {
-        color: $color-accent;
-      }
+    &-card-entry {
+      color: $color-accent;
     }
     
     &-section {
@@ -99,10 +94,6 @@ export default {
   .v-list {
     background-color: transparent;
   }
-
-  .v-card-title, .v-card-subtitle {
-    white-space: pre-wrap;
-  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -113,6 +104,10 @@ export default {
     .v-card-text {
       padding: 0;
       padding-bottom: $spacer-md;
+    }
+
+    &__content-image-src {
+      margin-left: unset;
     }
   }
 }

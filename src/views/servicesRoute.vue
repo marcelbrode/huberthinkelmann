@@ -128,7 +128,7 @@ export default {
     flex-wrap: wrap;
 
     &-card {
-      width: 60%;
+      max-width: 80%;
 
       &-title {
         padding: 8px 0 24px;
@@ -153,6 +153,18 @@ export default {
       }
     }
 
+    &-card-button {
+      flex: 40%;
+      margin: 4px 0;
+      text-transform: none;
+      color: $color-secondary;
+    }
+
+    &-card {
+      max-width: 60%;
+      padding: 12px 24px;
+    }
+
     &-image-src {
       width: 350px;
       margin-left: 36px;
@@ -162,8 +174,18 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .services-route {
-    &__content-card-button {
-      flex: 100%;
+    &__content {
+      &-card-button {
+        flex: 100%;
+      }
+
+      &-card {
+        max-width: unset;
+      }
+
+      &-image-src {
+        margin-left: unset;
+      }
     }
   }
 }
