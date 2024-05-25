@@ -16,7 +16,7 @@
           1. Personenbezogene Daten
         </v-card-subtitle>
         <v-card-text class="copyright-route__content-gdpr-text">
-          Über die Webseiten von <a href="https://huberhinkelmann.de">https://huberhinkelmann.de</a> werden (mit Ausnahme Ihrer IP-Adresse) keinerlei personenbezogene Daten (zum Beispiel Namen, Anschriften, Telefonnummern oder E-Mail-Adressen) erfasst oder gespeichert.
+          Über die Webseiten von <a href="https://huberthinkelmann.de">https://huberthinkelmann.de</a> werden (mit Ausnahme Ihrer IP-Adresse) keinerlei personenbezogene Daten (zum Beispiel Namen, Anschriften, Telefonnummern oder E-Mail-Adressen) erfasst oder gespeichert.
         </v-card-text>
       </div>
       <div class="copyright-route__content-save-gdpr">
