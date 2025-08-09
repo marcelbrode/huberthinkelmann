@@ -6,13 +6,13 @@
         <div class="header__language-select">
           <country-flag
             class="header__flag"
-            iso="DE"
+            country="de"
             @click="updateLanguageLocale('de-DE')"
           />
           <div class="header__separator">|</div>
           <country-flag
             class="header__flag"
-            iso="GB"
+            country="gb"
             @click="updateLanguageLocale('en-GB')"
           />
         </div>
@@ -92,7 +92,6 @@ $logo-sizes: 250px 60px;
 
   &__logo {
     background: url('@/assets/logo.svg') no-repeat;
-    background-repeat: no-repeat;
     background-size: $logo-sizes;
     width: 250px;
     height: 60px;
@@ -108,13 +107,22 @@ $logo-sizes: 250px 60px;
     display: flex;
     justify-content: right;
     gap: 12px;
+    height: 24px;
   }
 
   &__flag {
-    border-radius: 25;
+    translate: 0 -8px;
+    transform: unset;
+    scale: 0.42;
+    margin-left: -15px;
+    margin-right: -15px;
 
     &:hover {
       cursor: pointer;
+    }
+
+    &:before {
+      content: none;
     }
   }
 

@@ -16,12 +16,12 @@
                 <div class="sidebar__header-language">
                     <country-flag
                         class="sidebar__header-language-flag"
-                        iso="DE"
+                        country="de"
                         @click="updateLanguageLocale('de-DE')"
                     />
                     <country-flag
                         class="sidebar__header-language-flag"
-                        iso="GB"
+                        country="gb"
                         @click="updateLanguageLocale('en-GB')"
                     />
                 </div>
@@ -132,11 +132,13 @@ $sidebar-border-style: 1px solid $color-tertiary;
             display: flex;
             flex-direction: row;
             height: 36px;
-            gap: 24px;
+            gap: 34px;
             justify-content: flex-end;
+            translate: -6px -2px;
 
             &-flag {
                 padding: 0 18px;
+                scale: 1.4;
             }
         }
     }
