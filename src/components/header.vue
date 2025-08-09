@@ -111,18 +111,8 @@ $logo-sizes: 250px 60px;
   }
 
   &__flag {
-    translate: 0 -8px;
-    transform: unset;
-    scale: 0.42;
-    margin-left: -15px;
-    margin-right: -15px;
-
     &:hover {
       cursor: pointer;
-    }
-
-    &:before {
-      content: none;
     }
   }
 
