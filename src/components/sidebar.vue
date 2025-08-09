@@ -132,11 +132,13 @@ $sidebar-border-style: 1px solid $color-tertiary;
             display: flex;
             flex-direction: row;
             height: 36px;
-            gap: 24px;
+            gap: 34px;
             justify-content: flex-end;
+            margin-right: 5px;
 
             &-flag {
                 padding: 0 18px;
+                scale: 1.4;
             }
         }
     }
